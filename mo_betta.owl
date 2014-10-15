@@ -1,289 +1,867 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE Ontology [
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace">
-    <Prefix name="" IRI="http://www.semanticweb.org/owl/owlapi/turtle#"/>
-    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
-    <Prefix name="mo" IRI="http://purl.org/ontology/mo/"/>
-    <Prefix name="tl" IRI="http://purl.org/NET/c4dm/timeline.owl#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
-    <Prefix name="event" IRI="http://purl.org/NET/c4dm/event.owl#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">Oct 11, 2014 8:26:03 PM</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">system</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tony Davis</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://protege.stanford.edu/webprotege/revision"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">66</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">This ontology was generated from an ontology revision in WebProtege http://webprotege.stanford.edu</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Music Ontology example from http://musicontology.com/docs/getting-started.html, with addition of skos:prefLabel</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R73m0ZRlgB8XZtd25Ow6uUZ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R7MFGyRqdzm8cuNYg3MkJzx"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R7OsBI4y1KvXfuQiGzE6xFh"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R7b2Px1qMFWCg5Zro2a1pfV"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R7pivwphZKDmu3rMyqqdueI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R7sZAQQjKxb3JJq6LdxBHqq"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R7tGOEuXQs24wrzEWNquzlx"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R8JG87aeQ04ZP48GUb867bv"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R8WYE9MkTUTYIURChRjYUz3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R8bjwo4LKZ7SeiDbFliMpYb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R8yJiYbcT2DiQ20DA9B3d9d"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R9J6lZoLXjMNInUcMCxoiD"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RB8vkPqlKEXpY5awDyM6Pwa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RBFrf6xzk8UOZTnys7CmTVY"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RBMez4G7bTKH0tsLQD8W3rt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RBdMnWSrEh8q7dzc5t6wUYH"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RBdqduTKzS3x48k0wNnxEHg"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RBkYV17ajVnEqno2LcUHDPG"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RBpmwucRcaTkVRqEHkhRsiy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RC1LFKoQNrHlF2jlgZq6Zfm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RC4hc2TBokoBlPuLinVuUQm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RCfWTK38HPR36UJtFIN1Nqj"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RCpJ00nkBPpzuhlJsvzLxL0"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RCwLYvQADSKRRazbXSrZQZQ"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RDgv9EA5w1TJbjDKub7pyH5"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RDn6ln50ZiNW7jNQKGSRAY3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RF6Jj6AWjmYLCD9RfeojPM"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RIIZalLNkci2o6iUPhIzLm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RU4SfLG3hbRrtAWXPUrAMm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RXohA4pdIexzuq6N0eiBBi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RiXw7lt668dfuAnFaVPKjd"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RjWjRf3AKEKkpMUXZXCIz0"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RoGnrOJVIB4wMM87xRwOrS"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RsvM3BR7R4VqIaJllB4erz"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R73m0ZRlgB8XZtd25Ow6uUZ"/>
+        <Class IRI="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
+        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R7MFGyRqdzm8cuNYg3MkJzx"/>
+        <Class IRI="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R7OsBI4y1KvXfuQiGzE6xFh"/>
+        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R7b2Px1qMFWCg5Zro2a1pfV"/>
+        <Class IRI="http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R7pivwphZKDmu3rMyqqdueI"/>
+        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R7sZAQQjKxb3JJq6LdxBHqq"/>
+        <Class IRI="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R7tGOEuXQs24wrzEWNquzlx"/>
+        <Class IRI="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6"/>
+        <Class IRI="http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj"/>
+        <Class IRI="http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R8JG87aeQ04ZP48GUb867bv"/>
+        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R8WYE9MkTUTYIURChRjYUz3"/>
+        <Class IRI="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R8bjwo4LKZ7SeiDbFliMpYb"/>
+        <Class IRI="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR"/>
+        <Class IRI="http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF"/>
+        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R8yJiYbcT2DiQ20DA9B3d9d"/>
+        <Class IRI="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R9J6lZoLXjMNInUcMCxoiD"/>
+        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
+        <Class IRI="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r"/>
+        <Class IRI="http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RB8vkPqlKEXpY5awDyM6Pwa"/>
+        <Class IRI="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RBFrf6xzk8UOZTnys7CmTVY"/>
+        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RBMez4G7bTKH0tsLQD8W3rt"/>
+        <Class IRI="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
+        <Class IRI="http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RBdMnWSrEh8q7dzc5t6wUYH"/>
+        <Class IRI="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RBdqduTKzS3x48k0wNnxEHg"/>
+        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RBkYV17ajVnEqno2LcUHDPG"/>
+        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RBpmwucRcaTkVRqEHkhRsiy"/>
+        <Class IRI="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RC1LFKoQNrHlF2jlgZq6Zfm"/>
+        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RC4hc2TBokoBlPuLinVuUQm"/>
+        <Class IRI="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
+        <Class IRI="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RCfWTK38HPR36UJtFIN1Nqj"/>
+        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RCpJ00nkBPpzuhlJsvzLxL0"/>
+        <Class IRI="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RCwLYvQADSKRRazbXSrZQZQ"/>
+        <Class IRI="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RDgv9EA5w1TJbjDKub7pyH5"/>
+        <Class IRI="http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RDn6ln50ZiNW7jNQKGSRAY3"/>
+        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RF6Jj6AWjmYLCD9RfeojPM"/>
+        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RIIZalLNkci2o6iUPhIzLm"/>
+        <Class IRI="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd"/>
+        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RU4SfLG3hbRrtAWXPUrAMm"/>
+        <Class IRI="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RXohA4pdIexzuq6N0eiBBi"/>
+        <Class IRI="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RiXw7lt668dfuAnFaVPKjd"/>
+        <Class IRI="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl"/>
+        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RjWjRf3AKEKkpMUXZXCIz0"/>
+        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
+        <Class IRI="http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RoGnrOJVIB4wMM87xRwOrS"/>
+        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RsvM3BR7R4VqIaJllB4erz"/>
+        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
+        <Class IRI="http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR"/>
+    </SubClassOf>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:MusicGroup"/>
-        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#band-1"/>
+        <Class IRI="http://purl.org/ontology/mo/MusicGroup"/>
+        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#band-1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:MusicArtist"/>
-        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#bc"/>
+        <Class IRI="http://purl.org/ontology/mo/MusicArtist"/>
+        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#bc"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:Composition"/>
-        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#composition"/>
+        <Class IRI="http://purl.org/ontology/mo/Performance"/>
+        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#composition"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:MusicArtist"/>
-        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#gp"/>
+        <Class IRI="http://purl.org/ontology/mo/MusicArtist"/>
+        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#gp"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:MusicArtist"/>
-        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#imk"/>
+        <Class IRI="http://purl.org/ontology/mo/MusicArtist"/>
+        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#imk"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:MusicArtist"/>
-        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#jl"/>
+        <Class IRI="http://purl.org/ontology/mo/MusicArtist"/>
+        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#jl"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:MusicalWork"/>
-        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#kunst-der-fuge"/>
+        <Class IRI="http://purl.org/ontology/mo/MusicalWork"/>
+        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#kunst-der-fuge"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:Performance"/>
-        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#performance"/>
+        <Class IRI="http://purl.org/ontology/mo/Performance"/>
+        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#performance"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:Track"/>
-        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#track-1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="mo:Instrument"/>
+        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
         <NamedIndividual IRI="http://dbpedia.org/resource/Drum_kit"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:MusicArtist"/>
+        <Class IRI="http://purl.org/ontology/mo/MusicArtist"/>
         <NamedIndividual IRI="http://dbpedia.org/resource/Johann_Sebastian_Bach"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:Performance"/>
+        <Class IRI="http://purl.org/ontology/mo/Performance"/>
         <NamedIndividual IRI="http://etree.linkedmusic.org/performance/Mogwai1996-05-18"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:MusicGroup"/>
+        <Class IRI="http://purl.org/ontology/mo/MusicGroup"/>
         <NamedIndividual IRI="http://musicbrainz.org/artist/233fc3f3-6de2-465c-985e-e721dbabbace"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:Instrument"/>
-        <AnonymousIndividual nodeID="_:genid3"/>
+        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
+        <AnonymousIndividual nodeID="_:1115709451"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:Instrument"/>
-        <AnonymousIndividual nodeID="_:genid4"/>
+        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
+        <AnonymousIndividual nodeID="_:1164207724"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:Instrument"/>
-        <AnonymousIndividual nodeID="_:genid5"/>
+        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
+        <AnonymousIndividual nodeID="_:1456044527"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="mo:Instrument"/>
-        <AnonymousIndividual nodeID="_:genid6"/>
+        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
+        <AnonymousIndividual nodeID="_:427131570"/>
     </ClassAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:member"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#band-1</IRI>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#bc</IRI>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/member"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#band-1</IRI>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#bc</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:member"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#band-1</IRI>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#gp</IRI>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/member"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#band-1</IRI>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#gp</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:member"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#band-1</IRI>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#imk</IRI>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/member"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#band-1</IRI>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#imk</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:member"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#band-1</IRI>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#jl</IRI>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/member"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#band-1</IRI>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#jl</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#band-1</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Fugazi</Literal>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#band-1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fugazi</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#bc</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Brendan Canty</Literal>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#bc</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Brendan Canty</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="event:time"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#composition</IRI>
-        <AnonymousIndividual nodeID="_:genid1"/>
+        <AnnotationProperty IRI="http://purl.org/NET/c4dm/event.owl#time"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#composition</IRI>
+        <AnonymousIndividual nodeID="_:2049021000"/>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="mo:composer"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#composition</IRI>
+        <AnnotationProperty IRI="http://purl.org/ontology/mo/composer"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#composition</IRI>
         <IRI>http://dbpedia.org/resource/Johann_Sebastian_Bach</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="mo:produced_work"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#composition</IRI>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#kunst-der-fuge</IRI>
+        <AnnotationProperty IRI="http://purl.org/ontology/mo/produced_work"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#composition</IRI>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#kunst-der-fuge</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#composition</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Composition of The Art of Fugue, BWV 1080: Contrapunctus IX, a 4, alla Duodecima</Literal>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#composition</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Composition of The Art of Fugue, BWV 1080: Contrapunctus IX, a 4, alla Duodecima</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#composition</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The Art of the Fugue, BWV 1080</Literal>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#composition</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Art of the Fugue, BWV 1080</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#gp</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Guy Picciotto</Literal>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#gp</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Guy Picciotto</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#imk</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Ian MacKaye</Literal>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#imk</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ian MacKaye</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:name"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#jl</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Joe Lally</Literal>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#jl</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Joe Lally</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#kunst-der-fuge</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The Art of Fugue, BWV 1080: Contrapunctus IX, a 4, alla Duodecima</Literal>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#kunst-der-fuge</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Art of Fugue, BWV 1080: Contrapunctus IX, a 4, alla Duodecima</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="event:time"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
-        <AnonymousIndividual nodeID="_:genid2"/>
+        <AnnotationProperty IRI="http://purl.org/NET/c4dm/event.owl#time"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
+        <AnonymousIndividual nodeID="_:848183708"/>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="mo:instrument"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
-        <AnonymousIndividual nodeID="_:genid3"/>
+        <AnnotationProperty IRI="http://purl.org/ontology/mo/instrument"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
+        <AnonymousIndividual nodeID="_:1115709451"/>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="mo:instrument"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
-        <AnonymousIndividual nodeID="_:genid4"/>
+        <AnnotationProperty IRI="http://purl.org/ontology/mo/instrument"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
+        <AnonymousIndividual nodeID="_:1164207724"/>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="mo:instrument"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
-        <AnonymousIndividual nodeID="_:genid5"/>
+        <AnnotationProperty IRI="http://purl.org/ontology/mo/instrument"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
+        <AnonymousIndividual nodeID="_:1456044527"/>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="mo:instrument"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
-        <AnonymousIndividual nodeID="_:genid6"/>
+        <AnnotationProperty IRI="http://purl.org/ontology/mo/instrument"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
+        <AnonymousIndividual nodeID="_:427131570"/>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="mo:performance_of"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#kunst-der-fuge</IRI>
+        <AnnotationProperty IRI="http://purl.org/ontology/mo/performance_of"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#kunst-der-fuge</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="mo:performer"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
+        <AnnotationProperty IRI="http://purl.org/ontology/mo/performer"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
         <IRI>http://musicbrainz.org/artist/fd20e8ed-0736-44db-8d97-530fbf00e813#_</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="mo:recorded_as"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
+        <AnnotationProperty IRI="http://purl.org/ontology/mo/recorded_as"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
         <IRI>http://musicbrainz.org/recording/93da082b-99c1-4469-9eb6-91e9fbeaeb2a#_</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dc:title"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#track-1</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Turnover</Literal>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#track-1</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Turnover</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:maker"/>
-        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#track-1</IRI>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/maker"/>
+        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#track-1</IRI>
         <IRI>http://musicbrainz.org/artist/233fc3f3-6de2-465c-985e-e721dbabbace#_</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <IRI>http://dbpedia.org/resource/Johann_Sebastian_Bach</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Johann Sebastian Bach</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Johann Sebastian Bach</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="event:place"/>
+        <AnnotationProperty IRI="http://purl.org/NET/c4dm/event.owl#place"/>
         <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
         <IRI>http://etree.linkedmusic.org/venue/Mogwai1996-05-18</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="event:sub_event"/>
+        <AnnotationProperty IRI="http://purl.org/NET/c4dm/event.owl#sub_event"/>
         <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
         <IRI>http://etree.linkedmusic.org/track/Mogwai1996-05-18-1</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
-        <Literal datatypeIRI="&xsd;date">1996-05-18</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1996-05-18</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="mo:performer"/>
+        <AnnotationProperty IRI="http://purl.org/ontology/mo/performer"/>
         <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
         <IRI>http://musicbrainz.org/artist/d700b3f5-45af-4d02-95ed-57d301bda93e#_</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A performance by Mogwai</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A performance by Mogwai</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://etree.linkedmusic.org/track/Mogwai1996-05-18-1</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Summer</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Summer</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <IRI>http://musicbrainz.org/artist/233fc3f3-6de2-465c-985e-e721dbabbace</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Fugazi</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fugazi</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
         <IRI>http://musicbrainz.org/artist/422aecc0-4aac-012f-19e9-00254bd44c28#_</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Mogwai</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mogwai</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AnonymousIndividual nodeID="_:genid3"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">first violin</Literal>
+        <IRI>http://webprotege.stanford.edu/R73m0ZRlgB8XZtd25Ow6uUZ</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Piano</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AnonymousIndividual nodeID="_:genid4"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">second violin</Literal>
+        <IRI>http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">KeyboardInstrument</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AnonymousIndividual nodeID="_:genid5"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">viola</Literal>
+        <IRI>http://webprotege.stanford.edu/R7MFGyRqdzm8cuNYg3MkJzx</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BflatClarinet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AnonymousIndividual nodeID="_:genid6"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">cello</Literal>
+        <IRI>http://webprotege.stanford.edu/R7OsBI4y1KvXfuQiGzE6xFh</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cornet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R7b2Px1qMFWCg5Zro2a1pfV</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Saxophone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R7pivwphZKDmu3rMyqqdueI</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Viola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R7sZAQQjKxb3JJq6LdxBHqq</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mandolin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R7tGOEuXQs24wrzEWNquzlx</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Harp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SingleReedInstrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BrassInstrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AerophoneWoodwindInstrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R8JG87aeQ04ZP48GUb867bv</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DoubleBass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R8WYE9MkTUTYIURChRjYUz3</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Guitar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R8bjwo4LKZ7SeiDbFliMpYb</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Piccolo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ReedInstrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">StringInstrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R8yJiYbcT2DiQ20DA9B3d9d</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Flute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R9J6lZoLXjMNInUcMCxoiD</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sackbut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PluckedStringInstrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Recorder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RB8vkPqlKEXpY5awDyM6Pwa</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CorAnglais</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RBFrf6xzk8UOZTnys7CmTVY</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WagnerTuba</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RBMez4G7bTKH0tsLQD8W3rt</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Harpsicord</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Clarinet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RBdMnWSrEh8q7dzc5t6wUYH</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Contrabassoon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RBdqduTKzS3x48k0wNnxEHg</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trumpet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RBkYV17ajVnEqno2LcUHDPG</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ViolaDaGamba</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RBpmwucRcaTkVRqEHkhRsiy</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AltoFlute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RC1LFKoQNrHlF2jlgZq6Zfm</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FrenchHorn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RC4hc2TBokoBlPuLinVuUQm</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bassoon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BowedStringInstrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RCfWTK38HPR36UJtFIN1Nqj</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trombone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RCpJ00nkBPpzuhlJsvzLxL0</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Oboe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RCwLYvQADSKRRazbXSrZQZQ</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EflatClarinet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RDgv9EA5w1TJbjDKub7pyH5</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Xylophone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RDn6ln50ZiNW7jNQKGSRAY3</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ElectronicInstrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RF6Jj6AWjmYLCD9RfeojPM</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Voice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RIIZalLNkci2o6iUPhIzLm</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Organ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PercussionInstrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RU4SfLG3hbRrtAWXPUrAMm</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RXohA4pdIexzuq6N0eiBBi</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Accordion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RiXw7lt668dfuAnFaVPKjd</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BassClarinet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WoodwindInstrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RjWjRf3AKEKkpMUXZXCIz0</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Violin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TransverseAerophoneWoodwindInstrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RoGnrOJVIB4wMM87xRwOrS</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tuba</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RsvM3BR7R4VqIaJllB4erz</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cello</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DoubleReedInstrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnonymousIndividual nodeID="_:1115709451"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">viola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnonymousIndividual nodeID="_:1164207724"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">first violin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnonymousIndividual nodeID="_:1456044527"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">second violin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnonymousIndividual nodeID="_:427131570"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cello</Literal>
     </AnnotationAssertion>
 </Ontology>
 
