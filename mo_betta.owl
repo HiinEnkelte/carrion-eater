@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <Prefix name="" IRI="http://www.semanticweb.org/owl/owlapi/turtle#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="mo" IRI="http://purl.org/ontology/mo/"/>
+    <Prefix name="tl" IRI="http://purl.org/NET/c4dm/timeline.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="event" IRI="http://purl.org/NET/c4dm/event.owl#"/>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:MusicGroup"/>
+        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#band-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:MusicArtist"/>
+        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#bc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:Composition"/>
+        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#composition"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:MusicArtist"/>
+        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#gp"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:MusicArtist"/>
+        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#imk"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:MusicArtist"/>
+        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#jl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:MusicalWork"/>
+        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#kunst-der-fuge"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:Performance"/>
+        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#performance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:Track"/>
+        <NamedIndividual IRI="file:/home/kean/Protege_5.0_beta/protege_ws/#track-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:Instrument"/>
+        <NamedIndividual IRI="http://dbpedia.org/resource/Drum_kit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:MusicArtist"/>
+        <NamedIndividual IRI="http://dbpedia.org/resource/Johann_Sebastian_Bach"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:Performance"/>
+        <NamedIndividual IRI="http://etree.linkedmusic.org/performance/Mogwai1996-05-18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:MusicGroup"/>
+        <NamedIndividual IRI="http://musicbrainz.org/artist/233fc3f3-6de2-465c-985e-e721dbabbace"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:Instrument"/>
+        <AnonymousIndividual nodeID="_:genid3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:Instrument"/>
+        <AnonymousIndividual nodeID="_:genid4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:Instrument"/>
+        <AnonymousIndividual nodeID="_:genid5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="mo:Instrument"/>
+        <AnonymousIndividual nodeID="_:genid6"/>
+    </ClassAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:member"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#band-1</IRI>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#bc</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:member"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#band-1</IRI>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#gp</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:member"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#band-1</IRI>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#imk</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:member"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#band-1</IRI>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#jl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#band-1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Fugazi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#bc</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Brendan Canty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="event:time"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#composition</IRI>
+        <AnonymousIndividual nodeID="_:genid1"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="mo:composer"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#composition</IRI>
+        <IRI>http://dbpedia.org/resource/Johann_Sebastian_Bach</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="mo:produced_work"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#composition</IRI>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#kunst-der-fuge</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#composition</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Composition of The Art of Fugue, BWV 1080: Contrapunctus IX, a 4, alla Duodecima</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#composition</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Art of the Fugue, BWV 1080</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#gp</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Guy Picciotto</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#imk</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Ian MacKaye</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#jl</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Joe Lally</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#kunst-der-fuge</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The Art of Fugue, BWV 1080: Contrapunctus IX, a 4, alla Duodecima</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="event:time"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
+        <AnonymousIndividual nodeID="_:genid2"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="mo:instrument"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
+        <AnonymousIndividual nodeID="_:genid3"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="mo:instrument"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
+        <AnonymousIndividual nodeID="_:genid4"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="mo:instrument"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
+        <AnonymousIndividual nodeID="_:genid5"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="mo:instrument"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
+        <AnonymousIndividual nodeID="_:genid6"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="mo:performance_of"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#kunst-der-fuge</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="mo:performer"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
+        <IRI>http://musicbrainz.org/artist/fd20e8ed-0736-44db-8d97-530fbf00e813#_</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="mo:recorded_as"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#performance</IRI>
+        <IRI>http://musicbrainz.org/recording/93da082b-99c1-4469-9eb6-91e9fbeaeb2a#_</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#track-1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Turnover</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:maker"/>
+        <IRI>file:/home/kean/Protege_5.0_beta/protege_ws/#track-1</IRI>
+        <IRI>http://musicbrainz.org/artist/233fc3f3-6de2-465c-985e-e721dbabbace#_</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>http://dbpedia.org/resource/Johann_Sebastian_Bach</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Johann Sebastian Bach</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="event:place"/>
+        <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
+        <IRI>http://etree.linkedmusic.org/venue/Mogwai1996-05-18</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="event:sub_event"/>
+        <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
+        <IRI>http://etree.linkedmusic.org/track/Mogwai1996-05-18-1</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:date"/>
+        <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
+        <Literal datatypeIRI="&xsd;date">1996-05-18</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="mo:performer"/>
+        <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
+        <IRI>http://musicbrainz.org/artist/d700b3f5-45af-4d02-95ed-57d301bda93e#_</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A performance by Mogwai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://etree.linkedmusic.org/track/Mogwai1996-05-18-1</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Summer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>http://musicbrainz.org/artist/233fc3f3-6de2-465c-985e-e721dbabbace</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Fugazi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="foaf:name"/>
+        <IRI>http://musicbrainz.org/artist/422aecc0-4aac-012f-19e9-00254bd44c28#_</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Mogwai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnonymousIndividual nodeID="_:genid3"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">first violin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnonymousIndividual nodeID="_:genid4"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">second violin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnonymousIndividual nodeID="_:genid5"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">viola</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnonymousIndividual nodeID="_:genid6"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">cello</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
