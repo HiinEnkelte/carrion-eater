@@ -1,869 +1,2200 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.w3.org/2002/07/owl#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY mo "http://purl.org/ontology/mo/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY event "http://purl.org/NET/c4dm/event.owl#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY webprotege "http://protege.stanford.edu/webprotege/" >
+    <!ENTITY ont "http://www.co-ode.org/ontologies/ont.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:mo="http://purl.org/ontology/mo/"
+     xmlns:webprotege="http://protege.stanford.edu/webprotege/"
+     xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">Oct 11, 2014 8:26:03 PM</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">system</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Tony Davis</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://protege.stanford.edu/webprotege/revision"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">66</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">This ontology was generated from an ontology revision in WebProtege http://webprotege.stanford.edu</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">Music Ontology example from http://musicontology.com/docs/getting-started.html, with addition of skos:prefLabel</Literal>
-    </Annotation>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R73m0ZRlgB8XZtd25Ow6uUZ"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R7MFGyRqdzm8cuNYg3MkJzx"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R7OsBI4y1KvXfuQiGzE6xFh"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R7b2Px1qMFWCg5Zro2a1pfV"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R7pivwphZKDmu3rMyqqdueI"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R7sZAQQjKxb3JJq6LdxBHqq"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R7tGOEuXQs24wrzEWNquzlx"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R8JG87aeQ04ZP48GUb867bv"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R8WYE9MkTUTYIURChRjYUz3"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R8bjwo4LKZ7SeiDbFliMpYb"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R8yJiYbcT2DiQ20DA9B3d9d"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R9J6lZoLXjMNInUcMCxoiD"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RB8vkPqlKEXpY5awDyM6Pwa"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RBFrf6xzk8UOZTnys7CmTVY"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RBMez4G7bTKH0tsLQD8W3rt"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RBdMnWSrEh8q7dzc5t6wUYH"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RBdqduTKzS3x48k0wNnxEHg"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RBkYV17ajVnEqno2LcUHDPG"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RBpmwucRcaTkVRqEHkhRsiy"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RC1LFKoQNrHlF2jlgZq6Zfm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RC4hc2TBokoBlPuLinVuUQm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RCfWTK38HPR36UJtFIN1Nqj"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RCpJ00nkBPpzuhlJsvzLxL0"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RCwLYvQADSKRRazbXSrZQZQ"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RDgv9EA5w1TJbjDKub7pyH5"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RDn6ln50ZiNW7jNQKGSRAY3"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RF6Jj6AWjmYLCD9RfeojPM"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RIIZalLNkci2o6iUPhIzLm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RU4SfLG3hbRrtAWXPUrAMm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RXohA4pdIexzuq6N0eiBBi"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RiXw7lt668dfuAnFaVPKjd"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RjWjRf3AKEKkpMUXZXCIz0"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RoGnrOJVIB4wMM87xRwOrS"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RsvM3BR7R4VqIaJllB4erz"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R73m0ZRlgB8XZtd25Ow6uUZ"/>
-        <Class IRI="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
-        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R7MFGyRqdzm8cuNYg3MkJzx"/>
-        <Class IRI="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R7OsBI4y1KvXfuQiGzE6xFh"/>
-        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R7b2Px1qMFWCg5Zro2a1pfV"/>
-        <Class IRI="http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R7pivwphZKDmu3rMyqqdueI"/>
-        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R7sZAQQjKxb3JJq6LdxBHqq"/>
-        <Class IRI="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R7tGOEuXQs24wrzEWNquzlx"/>
-        <Class IRI="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6"/>
-        <Class IRI="http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
-        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj"/>
-        <Class IRI="http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R8JG87aeQ04ZP48GUb867bv"/>
-        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R8WYE9MkTUTYIURChRjYUz3"/>
-        <Class IRI="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R8bjwo4LKZ7SeiDbFliMpYb"/>
-        <Class IRI="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR"/>
-        <Class IRI="http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF"/>
-        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R8yJiYbcT2DiQ20DA9B3d9d"/>
-        <Class IRI="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R9J6lZoLXjMNInUcMCxoiD"/>
-        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
-        <Class IRI="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r"/>
-        <Class IRI="http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RB8vkPqlKEXpY5awDyM6Pwa"/>
-        <Class IRI="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RBFrf6xzk8UOZTnys7CmTVY"/>
-        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RBMez4G7bTKH0tsLQD8W3rt"/>
-        <Class IRI="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
-        <Class IRI="http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RBdMnWSrEh8q7dzc5t6wUYH"/>
-        <Class IRI="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RBdqduTKzS3x48k0wNnxEHg"/>
-        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RBkYV17ajVnEqno2LcUHDPG"/>
-        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RBpmwucRcaTkVRqEHkhRsiy"/>
-        <Class IRI="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RC1LFKoQNrHlF2jlgZq6Zfm"/>
-        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RC4hc2TBokoBlPuLinVuUQm"/>
-        <Class IRI="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
-        <Class IRI="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RCfWTK38HPR36UJtFIN1Nqj"/>
-        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RCpJ00nkBPpzuhlJsvzLxL0"/>
-        <Class IRI="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RCwLYvQADSKRRazbXSrZQZQ"/>
-        <Class IRI="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RDgv9EA5w1TJbjDKub7pyH5"/>
-        <Class IRI="http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RDn6ln50ZiNW7jNQKGSRAY3"/>
-        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RF6Jj6AWjmYLCD9RfeojPM"/>
-        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RIIZalLNkci2o6iUPhIzLm"/>
-        <Class IRI="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd"/>
-        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RU4SfLG3hbRrtAWXPUrAMm"/>
-        <Class IRI="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RXohA4pdIexzuq6N0eiBBi"/>
-        <Class IRI="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RiXw7lt668dfuAnFaVPKjd"/>
-        <Class IRI="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl"/>
-        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RjWjRf3AKEKkpMUXZXCIz0"/>
-        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
-        <Class IRI="http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RoGnrOJVIB4wMM87xRwOrS"/>
-        <Class IRI="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RsvM3BR7R4VqIaJllB4erz"/>
-        <Class IRI="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
-        <Class IRI="http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR"/>
-    </SubClassOf>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/MusicGroup"/>
-        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#band-1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/MusicArtist"/>
-        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#bc"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/Performance"/>
-        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#composition"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/MusicArtist"/>
-        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#gp"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/MusicArtist"/>
-        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#imk"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/MusicArtist"/>
-        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#jl"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/MusicalWork"/>
-        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#kunst-der-fuge"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/Performance"/>
-        <NamedIndividual IRI="file:/apps/bmir.apps/web-protege-data/uploads/#performance"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
-        <NamedIndividual IRI="http://dbpedia.org/resource/Drum_kit"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/MusicArtist"/>
-        <NamedIndividual IRI="http://dbpedia.org/resource/Johann_Sebastian_Bach"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/Performance"/>
-        <NamedIndividual IRI="http://etree.linkedmusic.org/performance/Mogwai1996-05-18"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/MusicGroup"/>
-        <NamedIndividual IRI="http://musicbrainz.org/artist/233fc3f3-6de2-465c-985e-e721dbabbace"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
-        <AnonymousIndividual nodeID="_:1115709451"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
-        <AnonymousIndividual nodeID="_:1164207724"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
-        <AnonymousIndividual nodeID="_:1456044527"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="http://purl.org/ontology/mo/Instrument"/>
-        <AnonymousIndividual nodeID="_:427131570"/>
-    </ClassAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/member"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#band-1</IRI>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#bc</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/member"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#band-1</IRI>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#gp</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/member"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#band-1</IRI>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#imk</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/member"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#band-1</IRI>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#jl</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#band-1</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fugazi</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#bc</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Brendan Canty</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/NET/c4dm/event.owl#time"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#composition</IRI>
-        <AnonymousIndividual nodeID="_:2049021000"/>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/ontology/mo/composer"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#composition</IRI>
-        <IRI>http://dbpedia.org/resource/Johann_Sebastian_Bach</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/ontology/mo/produced_work"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#composition</IRI>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#kunst-der-fuge</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#composition</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Composition of The Art of Fugue, BWV 1080: Contrapunctus IX, a 4, alla Duodecima</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#composition</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Art of the Fugue, BWV 1080</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#gp</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Guy Picciotto</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#imk</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ian MacKaye</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#jl</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Joe Lally</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#kunst-der-fuge</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Art of Fugue, BWV 1080: Contrapunctus IX, a 4, alla Duodecima</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/NET/c4dm/event.owl#time"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
-        <AnonymousIndividual nodeID="_:848183708"/>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/ontology/mo/instrument"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
-        <AnonymousIndividual nodeID="_:1115709451"/>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/ontology/mo/instrument"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
-        <AnonymousIndividual nodeID="_:1164207724"/>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/ontology/mo/instrument"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
-        <AnonymousIndividual nodeID="_:1456044527"/>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/ontology/mo/instrument"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
-        <AnonymousIndividual nodeID="_:427131570"/>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/ontology/mo/performance_of"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#kunst-der-fuge</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/ontology/mo/performer"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
-        <IRI>http://musicbrainz.org/artist/fd20e8ed-0736-44db-8d97-530fbf00e813#_</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/ontology/mo/recorded_as"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#performance</IRI>
-        <IRI>http://musicbrainz.org/recording/93da082b-99c1-4469-9eb6-91e9fbeaeb2a#_</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#track-1</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Turnover</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/maker"/>
-        <IRI>file:/apps/bmir.apps/web-protege-data/uploads/#track-1</IRI>
-        <IRI>http://musicbrainz.org/artist/233fc3f3-6de2-465c-985e-e721dbabbace#_</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
-        <IRI>http://dbpedia.org/resource/Johann_Sebastian_Bach</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Johann Sebastian Bach</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/NET/c4dm/event.owl#place"/>
-        <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
-        <IRI>http://etree.linkedmusic.org/venue/Mogwai1996-05-18</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/NET/c4dm/event.owl#sub_event"/>
-        <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
-        <IRI>http://etree.linkedmusic.org/track/Mogwai1996-05-18-1</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">1996-05-18</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/ontology/mo/performer"/>
-        <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
-        <IRI>http://musicbrainz.org/artist/d700b3f5-45af-4d02-95ed-57d301bda93e#_</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://etree.linkedmusic.org/performance/Mogwai1996-05-18</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A performance by Mogwai</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://etree.linkedmusic.org/track/Mogwai1996-05-18-1</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Summer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
-        <IRI>http://musicbrainz.org/artist/233fc3f3-6de2-465c-985e-e721dbabbace</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Fugazi</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
-        <IRI>http://musicbrainz.org/artist/422aecc0-4aac-012f-19e9-00254bd44c28#_</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mogwai</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R73m0ZRlgB8XZtd25Ow6uUZ</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Piano</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">KeyboardInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R7MFGyRqdzm8cuNYg3MkJzx</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BflatClarinet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R7OsBI4y1KvXfuQiGzE6xFh</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cornet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R7b2Px1qMFWCg5Zro2a1pfV</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Saxophone</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R7pivwphZKDmu3rMyqqdueI</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Viola</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R7sZAQQjKxb3JJq6LdxBHqq</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mandolin</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R7tGOEuXQs24wrzEWNquzlx</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Harp</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SingleReedInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BrassInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AerophoneWoodwindInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R8JG87aeQ04ZP48GUb867bv</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DoubleBass</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R8WYE9MkTUTYIURChRjYUz3</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Guitar</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R8bjwo4LKZ7SeiDbFliMpYb</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Piccolo</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ReedInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">StringInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R8yJiYbcT2DiQ20DA9B3d9d</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Flute</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R9J6lZoLXjMNInUcMCxoiD</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sackbut</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PluckedStringInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Recorder</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RB8vkPqlKEXpY5awDyM6Pwa</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">CorAnglais</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RBFrf6xzk8UOZTnys7CmTVY</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WagnerTuba</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RBMez4G7bTKH0tsLQD8W3rt</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Harpsicord</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Clarinet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RBdMnWSrEh8q7dzc5t6wUYH</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Contrabassoon</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RBdqduTKzS3x48k0wNnxEHg</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trumpet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RBkYV17ajVnEqno2LcUHDPG</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ViolaDaGamba</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RBpmwucRcaTkVRqEHkhRsiy</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AltoFlute</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RC1LFKoQNrHlF2jlgZq6Zfm</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FrenchHorn</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RC4hc2TBokoBlPuLinVuUQm</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bassoon</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BowedStringInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RCfWTK38HPR36UJtFIN1Nqj</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trombone</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RCpJ00nkBPpzuhlJsvzLxL0</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Oboe</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RCwLYvQADSKRRazbXSrZQZQ</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">EflatClarinet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RDgv9EA5w1TJbjDKub7pyH5</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Xylophone</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RDn6ln50ZiNW7jNQKGSRAY3</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ElectronicInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RF6Jj6AWjmYLCD9RfeojPM</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Voice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RIIZalLNkci2o6iUPhIzLm</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Organ</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PercussionInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RU4SfLG3hbRrtAWXPUrAMm</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lute</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RXohA4pdIexzuq6N0eiBBi</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Accordion</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RiXw7lt668dfuAnFaVPKjd</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">BassClarinet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WoodwindInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RjWjRf3AKEKkpMUXZXCIz0</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Violin</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TransverseAerophoneWoodwindInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RoGnrOJVIB4wMM87xRwOrS</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tuba</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RsvM3BR7R4VqIaJllB4erz</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cello</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">DoubleReedInstrument</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AnonymousIndividual nodeID="_:1115709451"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">viola</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AnonymousIndividual nodeID="_:1164207724"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">first violin</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AnonymousIndividual nodeID="_:1456044527"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">second violin</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AnonymousIndividual nodeID="_:427131570"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">cello</Literal>
-    </AnnotationAssertion>
-</Ontology>
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <Ontology>
+        <rdfs:comment rdf:datatype="&xsd;string">Music Ontology example from http://musicontology.com/docs/getting-started.html, with addition of skos:prefLabel</rdfs:comment>
+        <dc:date rdf:datatype="&xsd;dateTime">Oct 11, 2014 7:42:30 PM</dc:date>
+        <rdfs:comment rdf:datatype="&xsd;string">This ontology was generated from an ontology revision in WebProtege http://webprotege.stanford.edu</rdfs:comment>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/NET/c4dm/event.owl#place -->
+
+    <AnnotationProperty rdf:about="&event;place"/>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/event.owl#sub_event -->
+
+    <AnnotationProperty rdf:about="&event;sub_event"/>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/event.owl#time -->
+
+    <AnnotationProperty rdf:about="&event;time"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <AnnotationProperty rdf:about="&dc;date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <AnnotationProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/composer -->
+
+    <AnnotationProperty rdf:about="&mo;composer"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/instrument -->
+
+    <AnnotationProperty rdf:about="&mo;instrument"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/performer -->
+
+    <AnnotationProperty rdf:about="&mo;performer"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/produced_work -->
+
+    <AnnotationProperty rdf:about="&mo;produced_work"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/recorded_as -->
+
+    <AnnotationProperty rdf:about="&mo;recorded_as"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <AnnotationProperty rdf:about="&skos;prefLabel"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/maker -->
+
+    <AnnotationProperty rdf:about="&foaf;maker"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/member -->
+
+    <AnnotationProperty rdf:about="&foaf;member"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <AnnotationProperty rdf:about="&foaf;name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#composerOfWork -->
+
+    <ObjectProperty rdf:about="&ont;composerOfWork">
+        <rdfs:range rdf:resource="&mo;MusicalWork"/>
+        <rdfs:domain rdf:resource="&ont;Composer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#containsLocation -->
+
+    <ObjectProperty rdf:about="&ont;containsLocation">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:domain rdf:resource="&ont;Location"/>
+        <rdfs:range rdf:resource="&ont;Location"/>
+        <inverseOf rdf:resource="&ont;locatedIn"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#eventHasPerformance -->
+
+    <ObjectProperty rdf:about="&ont;eventHasPerformance">
+        <rdfs:range rdf:resource="&mo;Performance"/>
+        <rdfs:domain rdf:resource="&ont;MusicalEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;hasPart"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasPart -->
+
+    <ObjectProperty rdf:about="&ont;hasPart">
+        <rdfs:comment>Basic, abstract partonomic relation, which subsumes, among other things, membership and subevent properties.</rdfs:comment>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasPerformedPart -->
+
+    <ObjectProperty rdf:about="&ont;hasPerformedPart">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="&mo;Performance"/>
+        <rdfs:range rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;hasPart"/>
+        <inverseOf rdf:resource="&ont;partInPerformance"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#locatedIn -->
+
+    <ObjectProperty rdf:about="&ont;locatedIn">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:range rdf:resource="&ont;Location"/>
+        <rdfs:domain rdf:resource="&ont;Location"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#locationsOverlap -->
+
+    <ObjectProperty rdf:about="&ont;locationsOverlap">
+        <rdfs:range rdf:resource="&ont;GeograhicalLocation"/>
+        <rdfs:domain rdf:resource="&ont;GeograhicalLocation"/>
+        <inverseOf rdf:resource="&ont;locationsOverlap"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#memberOfPerformingGroup -->
+
+    <ObjectProperty rdf:about="&ont;memberOfPerformingGroup">
+        <rdfs:range rdf:resource="&ont;GroupPerformer"/>
+        <rdfs:domain rdf:resource="&ont;IndividualPerformer"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;partOf"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#partInPerformance -->
+
+    <ObjectProperty rdf:about="&ont;partInPerformance">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&mo;Performance"/>
+        <rdfs:domain rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;partOf"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#partOf -->
+
+    <ObjectProperty rdf:about="&ont;partOf">
+        <rdfs:comment>Basic, abstract partonomic relation, which subsumes, among other things, member_of and subevent_of properties.</rdfs:comment>
+        <inverseOf rdf:resource="&ont;hasPart"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#partPerformedBy -->
+
+    <ObjectProperty rdf:about="&ont;partPerformedBy">
+        <rdfs:range rdf:resource="&ont;Performer"/>
+        <rdfs:domain rdf:resource="&ont;SoundProductionEvent"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#performanceInEvent -->
+
+    <ObjectProperty rdf:about="&ont;performanceInEvent">
+        <rdfs:domain rdf:resource="&mo;Performance"/>
+        <rdfs:range rdf:resource="&ont;MusicalEvent"/>
+        <inverseOf rdf:resource="&ont;eventHasPerformance"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;partOf"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#performanceOf -->
+
+    <ObjectProperty rdf:about="&ont;performanceOf">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:comment>This property relates an instance of Performance to an instance of MusicalWork.  Every Performance has to be a performance of some MusicalWork</rdfs:comment>
+        <rdfs:range rdf:resource="&mo;MusicalWork"/>
+        <rdfs:domain rdf:resource="&mo;Performance"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#performanceOfPart -->
+
+    <ObjectProperty rdf:about="&ont;performanceOfPart">
+        <rdfs:domain rdf:resource="&ont;Performer"/>
+        <rdfs:range rdf:resource="&ont;SoundProductionEvent"/>
+        <inverseOf rdf:resource="&ont;partPerformedBy"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#performedBy -->
+
+    <ObjectProperty rdf:about="&ont;performedBy">
+        <rdfs:domain rdf:resource="&mo;Performance"/>
+        <rdfs:range rdf:resource="&ont;Performer"/>
+        <inverseOf rdf:resource="&ont;performerIn"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#performerIn -->
+
+    <ObjectProperty rdf:about="&ont;performerIn">
+        <rdfs:range rdf:resource="&mo;Performance"/>
+        <rdfs:domain rdf:resource="&ont;Performer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#performerOfWork -->
+
+    <ObjectProperty rdf:about="&ont;performerOfWork">
+        <rdfs:comment>This property relates a Performer to all the MusicalWorks whose Performance involves that Performer.  It should be inferred from a conjunction of workPerformed/performanceOfWork and performedBy/performerIn, where the Performer is the same.</rdfs:comment>
+        <rdfs:range rdf:resource="&mo;MusicalWork"/>
+        <rdfs:domain rdf:resource="&ont;Performer"/>
+        <inverseOf rdf:resource="&ont;workHasPerformer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#performingGroupHasMember -->
+
+    <ObjectProperty rdf:about="&ont;performingGroupHasMember">
+        <rdfs:domain rdf:resource="&ont;GroupPerformer"/>
+        <rdfs:range rdf:resource="&ont;IndividualPerformer"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;hasPart"/>
+        <inverseOf rdf:resource="&ont;memberOfPerformingGroup"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#playsInstrument -->
+
+    <ObjectProperty rdf:about="&ont;playsInstrument">
+        <rdfs:range rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+        <rdfs:domain rdf:resource="&ont;InstrumentalMusician"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;performanceOfPart"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#singingRegister -->
+
+    <ObjectProperty rdf:about="&ont;singingRegister">
+        <rdfs:domain rdf:resource="&ont;Singer"/>
+        <rdfs:range rdf:resource="&ont;SingingVoice"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;performanceOfPart"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#workComposedBy -->
+
+    <ObjectProperty rdf:about="&ont;workComposedBy">
+        <rdfs:domain rdf:resource="&mo;MusicalWork"/>
+        <rdfs:range rdf:resource="&ont;Composer"/>
+        <inverseOf rdf:resource="&ont;composerOfWork"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#workHasPerformer -->
+
+    <ObjectProperty rdf:about="&ont;workHasPerformer">
+        <rdfs:comment>This property relates a MusicalWork to all the Performers involved in any Performance of that work.  It should be inferred from a conjunction of workPerformed/performanceOfWork and performedBy/performerIn, where the Performer is the same.</rdfs:comment>
+        <rdfs:domain rdf:resource="&mo;MusicalWork"/>
+        <rdfs:range rdf:resource="&ont;Performer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#workPerformed -->
+
+    <ObjectProperty rdf:about="&ont;workPerformed">
+        <rdfs:domain rdf:resource="&mo;MusicalWork"/>
+        <rdfs:range rdf:resource="&mo;Performance"/>
+        <inverseOf rdf:resource="&ont;performanceOf"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ontology/mo/InstrumentalSoundProductionEvent -->
+
+    <Class rdf:about="&mo;InstrumentalSoundProductionEvent">
+        <rdfs:subClassOf rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:comment>As a sublcass of SoundProductionEvent, this class has instances intended to represent the production of musical sound by a Performer performing a MusicalWork.  To avoid clumsy names, the subclasses are named by instruments and families of instruments, but keep in mind that, e.g., the subclass Flute actually denotes the flutist&apos;s production of sound in a Performance of a MusicalWork.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicArtist -->
+
+    <Class rdf:about="&mo;MusicArtist">
+        <rdfs:subClassOf rdf:resource="&ont;IndividualPerformer"/>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicGroup -->
+
+    <Class rdf:about="&mo;MusicGroup">
+        <rdfs:subClassOf rdf:resource="&ont;GroupPerformer"/>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicalWork -->
+
+    <Class rdf:about="&mo;MusicalWork">
+        <disjointWith rdf:resource="&mo;Performance"/>
+        <disjointWith rdf:resource="&ont;Agent"/>
+        <disjointWith rdf:resource="&ont;Location"/>
+        <disjointWith rdf:resource="&ont;MusicalEvent"/>
+        <disjointWith rdf:resource="&ont;MusicalGenre"/>
+        <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:comment>The class of musical compositions, in the abstract, not as manifested in individual Performances.  There are some borderline cases of what constitutes a distinct MusicalWork: ranging from slight differences in performance (transposition, playing a harpsichord piece on a modern piano), to substantially different arrangements (orchestrating a piano piece for full orchestra), to loose adaptations (one composer&apos;s variations on another&apos;s theme).  We will probably just try to be practical rather than punctilious regarding these cases.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Performance -->
+
+    <Class rdf:about="&mo;Performance">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;performanceOf"/>
+                <onClass rdf:resource="&mo;MusicalWork"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;hasPerformedPart"/>
+                <someValuesFrom rdf:resource="&ont;SoundProductionEvent"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;performedBy"/>
+                <someValuesFrom rdf:resource="&ont;Performer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <disjointWith rdf:resource="&ont;Agent"/>
+        <disjointWith rdf:resource="&ont;Location"/>
+        <disjointWith rdf:resource="&ont;MusicalEvent"/>
+        <disjointWith rdf:resource="&ont;MusicalGenre"/>
+        <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:comment>Each instance of Performance is an individual performance of a single MusicalWork, by a set of one or more Performers.  If a concert is repeated, then there&apos;s a separate instance of Performance for each time the MusicalWork is played.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG">
+        <rdfs:label>KeyboardInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7MFGyRqdzm8cuNYg3MkJzx -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R7MFGyRqdzm8cuNYg3MkJzx">
+        <rdfs:label>BflatClarinet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7OsBI4y1KvXfuQiGzE6xFh -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R7OsBI4y1KvXfuQiGzE6xFh">
+        <rdfs:label>Cornet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7b2Px1qMFWCg5Zro2a1pfV -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R7b2Px1qMFWCg5Zro2a1pfV">
+        <rdfs:label>Saxophone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7pivwphZKDmu3rMyqqdueI -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R7pivwphZKDmu3rMyqqdueI">
+        <rdfs:label>Viola</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7sZAQQjKxb3JJq6LdxBHqq -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R7sZAQQjKxb3JJq6LdxBHqq">
+        <rdfs:label>Mandolin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7tGOEuXQs24wrzEWNquzlx -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R7tGOEuXQs24wrzEWNquzlx">
+        <rdfs:label>Harp</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6 -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6">
+        <rdfs:label>SingleReedInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8 -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8">
+        <rdfs:label>BrassInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj">
+        <rdfs:label>AerophoneWoodwindInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8JG87aeQ04ZP48GUb867bv -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R8JG87aeQ04ZP48GUb867bv">
+        <rdfs:label>DoubleBass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8WYE9MkTUTYIURChRjYUz3 -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R8WYE9MkTUTYIURChRjYUz3">
+        <rdfs:label>Guitar</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8bjwo4LKZ7SeiDbFliMpYb -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R8bjwo4LKZ7SeiDbFliMpYb">
+        <rdfs:label>Piccolo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR">
+        <rdfs:label>ReedInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF">
+        <rdfs:label>StringInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8yJiYbcT2DiQ20DA9B3d9d -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R8yJiYbcT2DiQ20DA9B3d9d">
+        <rdfs:label>Flute</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9J6lZoLXjMNInUcMCxoiD -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R9J6lZoLXjMNInUcMCxoiD">
+        <rdfs:label>Sackbut</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa">
+        <rdfs:label>PluckedStringInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r">
+        <rdfs:label>Recorder</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RB8vkPqlKEXpY5awDyM6Pwa -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RB8vkPqlKEXpY5awDyM6Pwa">
+        <rdfs:label>CorAnglais</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBFrf6xzk8UOZTnys7CmTVY -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RBFrf6xzk8UOZTnys7CmTVY">
+        <rdfs:label>WagnerTuba</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBMez4G7bTKH0tsLQD8W3rt -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RBMez4G7bTKH0tsLQD8W3rt">
+        <rdfs:label>Harpsichord</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN">
+        <rdfs:label>Clarinet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7xywtm47NDgU6W2GTV08W6"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBdMnWSrEh8q7dzc5t6wUYH -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RBdMnWSrEh8q7dzc5t6wUYH">
+        <rdfs:label>Contrabassoon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBdqduTKzS3x48k0wNnxEHg -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RBdqduTKzS3x48k0wNnxEHg">
+        <rdfs:label>Trumpet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBkYV17ajVnEqno2LcUHDPG -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RBkYV17ajVnEqno2LcUHDPG">
+        <rdfs:label>ViolaDaGamba</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBpmwucRcaTkVRqEHkhRsiy -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RBpmwucRcaTkVRqEHkhRsiy">
+        <rdfs:label>AltoFlute</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RC1LFKoQNrHlF2jlgZq6Zfm -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RC1LFKoQNrHlF2jlgZq6Zfm">
+        <rdfs:label>FrenchHorn</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RC4hc2TBokoBlPuLinVuUQm -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RC4hc2TBokoBlPuLinVuUQm">
+        <rdfs:label>Bassoon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90 -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90">
+        <rdfs:label>BowedStringInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCfWTK38HPR36UJtFIN1Nqj -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RCfWTK38HPR36UJtFIN1Nqj">
+        <rdfs:label>Trombone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCpJ00nkBPpzuhlJsvzLxL0 -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RCpJ00nkBPpzuhlJsvzLxL0">
+        <rdfs:label>Oboe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCwLYvQADSKRRazbXSrZQZQ -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RCwLYvQADSKRRazbXSrZQZQ">
+        <rdfs:label>EflatClarinet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDgv9EA5w1TJbjDKub7pyH5 -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RDgv9EA5w1TJbjDKub7pyH5">
+        <rdfs:label>Xylophone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ont;Idiophone"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDn6ln50ZiNW7jNQKGSRAY3 -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RDn6ln50ZiNW7jNQKGSRAY3">
+        <rdfs:label>ElectronicInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+        <rdfs:comment>This class is meant to include all musical sound production via an electronic instrument, broadly defined, such as a synthesizer or an electric guitar.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RIIZalLNkci2o6iUPhIzLm -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RIIZalLNkci2o6iUPhIzLm">
+        <rdfs:label>Organ</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd">
+        <rdfs:label>PercussionInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RU4SfLG3hbRrtAWXPUrAMm -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RU4SfLG3hbRrtAWXPUrAMm">
+        <rdfs:label>Lute</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9n2Lf2uqahAhPDyyxYRwaa"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RXohA4pdIexzuq6N0eiBBi -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RXohA4pdIexzuq6N0eiBBi">
+        <rdfs:label>Accordion</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RiXw7lt668dfuAnFaVPKjd -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RiXw7lt668dfuAnFaVPKjd">
+        <rdfs:label>BassClarinet</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBTJSBwyTifxxPNuDyIEtdN"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl">
+        <rdfs:label>WoodwindInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RjWjRf3AKEKkpMUXZXCIz0 -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RjWjRf3AKEKkpMUXZXCIz0">
+        <rdfs:label>Violin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RmT6Zd7AnJZ1jewkwHDPCR">
+        <rdfs:label>TransverseAerophoneWoodwindInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R87sKt5n20VzvEXlKpkqOVj"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RoGnrOJVIB4wMM87xRwOrS -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RoGnrOJVIB4wMM87xRwOrS">
+        <rdfs:label>Tuba</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RsvM3BR7R4VqIaJllB4erz -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RsvM3BR7R4VqIaJllB4erz">
+        <rdfs:label>Cello</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RCRuo6sKQ4GunLYHMiuSI90"/>
+    </Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8 -->
+
+    <Class rdf:about="http://webprotege.stanford.edu/RwcKjNPG9VgTiI2ebqRSi8">
+        <rdfs:label>DoubleReedInstrument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8pEBlJzLuMpG0JYufyWPcR"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AcousticGuitar -->
+
+    <Class rdf:about="&ont;AcousticGuitar">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8WYE9MkTUTYIURChRjYUz3"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Agent -->
+
+    <Class rdf:about="&ont;Agent">
+        <disjointWith rdf:resource="&ont;Location"/>
+        <disjointWith rdf:resource="&ont;MusicalEvent"/>
+        <disjointWith rdf:resource="&ont;MusicalGenre"/>
+        <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:comment>A class subsuming humans and organizations, here in the context of the creation and performance of MusicalWorks.  This class is mostly a handy grouping that enables us to make a few useful statements (e.g., Agents are disjiont from MusicalWorks and Perfomances).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AltoRecorder -->
+
+    <Class rdf:about="&ont;AltoRecorder">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AvantGardeGenre -->
+
+    <Class rdf:about="&ont;AvantGardeGenre">
+        <rdfs:subClassOf rdf:resource="&ont;ModernGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Ballet -->
+
+    <Class rdf:about="&ont;Ballet">
+        <rdfs:subClassOf rdf:resource="&ont;MusicalWorkWithDance"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BaritoneVoice -->
+
+    <Class rdf:about="&ont;BaritoneVoice">
+        <rdfs:subClassOf rdf:resource="&ont;MaleVoice"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BaroqueGenre -->
+
+    <Class rdf:about="&ont;BaroqueGenre">
+        <rdfs:subClassOf rdf:resource="&ont;MusicalGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BassDrum -->
+
+    <Class rdf:about="&ont;BassDrum">
+        <rdfs:subClassOf rdf:resource="&ont;Drum"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BassRecorder -->
+
+    <Class rdf:about="&ont;BassRecorder">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Bell -->
+
+    <Class rdf:about="&ont;Bell">
+        <rdfs:subClassOf rdf:resource="&ont;Idiophone"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Celesta -->
+
+    <Class rdf:about="&ont;Celesta">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
+        <rdfs:subClassOf rdf:resource="&ont;Idiophone"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ChamberEnsemble -->
+
+    <Class rdf:about="&ont;ChamberEnsemble">
+        <rdfs:subClassOf rdf:resource="&mo;MusicGroup"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ChamberMusicWork -->
+
+    <Class rdf:about="&ont;ChamberMusicWork">
+        <rdfs:subClassOf rdf:resource="&ont;InstrumentalMusicalWork"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ChoralGroup -->
+
+    <Class rdf:about="&ont;ChoralGroup">
+        <rdfs:subClassOf rdf:resource="&mo;MusicGroup"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;performerOfWork"/>
+                <someValuesFrom rdf:resource="&ont;ChoralWork"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;performanceOfPart"/>
+                <someValuesFrom rdf:resource="&ont;VocalSoundProductionEvent"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ChoralSoundProductionEvent -->
+
+    <Class rdf:about="&ont;ChoralSoundProductionEvent">
+        <rdfs:subClassOf rdf:resource="&ont;VocalSoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ChoralWork -->
+
+    <Class rdf:about="&ont;ChoralWork">
+        <rdfs:subClassOf rdf:resource="&ont;VocalMusicalWork"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Clapping -->
+
+    <Class rdf:about="&ont;Clapping">
+        <rdfs:subClassOf rdf:resource="&ont;OtherSoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ClassicalGenre -->
+
+    <Class rdf:about="&ont;ClassicalGenre">
+        <rdfs:subClassOf rdf:resource="&ont;MusicalGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Composer -->
+
+    <Class rdf:about="&ont;Composer">
+        <rdfs:subClassOf rdf:resource="&ont;Agent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;composerOfWork"/>
+                <someValuesFrom rdf:resource="&mo;MusicalWork"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <disjointWith rdf:resource="&ont;PerformingArtsOrganization"/>
+        <rdfs:comment>Composer is the class of composers of MusicalWorks.  Composers are related to the works they compose by the properties composerOfWork and workComposedBy.  We will assume that members of this class are individual humans (there are a few cases of compositions written by committees, and music composed by computer software, which we will disregard).  There are some compositions whose composers aren&apos;t known, so there will be a special instance of this class called Anonymous, and possibly others like it (e.g. TraditionalHungarianFolksong).  For works composed by one individual and arranged by another, use the separate properties arrangerOfWork/workArrangedBy.  For works like operas or ballets, where there is additional creative input from librettists or choreographers, there are additional classes and properties.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Conductor -->
+
+    <Class rdf:about="&ont;Conductor">
+        <rdfs:subClassOf rdf:resource="&mo;MusicArtist"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ContraltoVoice -->
+
+    <Class rdf:about="&ont;ContraltoVoice">
+        <rdfs:subClassOf rdf:resource="&ont;FemaleVoice"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CounterTenorVoice -->
+
+    <Class rdf:about="&ont;CounterTenorVoice">
+        <rdfs:subClassOf rdf:resource="&ont;MaleVoice"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Cynbal -->
+
+    <Class rdf:about="&ont;Cynbal">
+        <rdfs:subClassOf rdf:resource="&ont;Idiophone"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DanceGroup -->
+
+    <Class rdf:about="&ont;DanceGroup">
+        <rdfs:subClassOf rdf:resource="&ont;GroupPerformer"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Dancer -->
+
+    <Class rdf:about="&ont;Dancer">
+        <rdfs:subClassOf rdf:resource="&ont;IndividualPerformer"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Drum -->
+
+    <Class rdf:about="&ont;Drum">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ElectricBass -->
+
+    <Class rdf:about="&ont;ElectricBass">
+        <rdfs:subClassOf rdf:resource="&ont;ElectricStringInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ElectricGuitar -->
+
+    <Class rdf:about="&ont;ElectricGuitar">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8WYE9MkTUTYIURChRjYUz3"/>
+        <rdfs:subClassOf rdf:resource="&ont;ElectricStringInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ElectricStringInstrument -->
+
+    <Class rdf:about="&ont;ElectricStringInstrument">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF"/>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDn6ln50ZiNW7jNQKGSRAY3"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ElectricViolin -->
+
+    <Class rdf:about="&ont;ElectricViolin">
+        <rdfs:subClassOf rdf:resource="&ont;ElectricStringInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ElectronicGenre -->
+
+    <Class rdf:about="&ont;ElectronicGenre">
+        <rdfs:subClassOf rdf:resource="&ont;ModernGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#FemaleVoice -->
+
+    <Class rdf:about="&ont;FemaleVoice">
+        <rdfs:subClassOf rdf:resource="&ont;SingingVoice"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GeograhicalLocation -->
+
+    <Class rdf:about="&ont;GeograhicalLocation">
+        <rdfs:subClassOf rdf:resource="&ont;Location"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Glockenspiel -->
+
+    <Class rdf:about="&ont;Glockenspiel">
+        <rdfs:subClassOf rdf:resource="&ont;Idiophone"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GroupPerformer -->
+
+    <Class rdf:about="&ont;GroupPerformer">
+        <rdfs:subClassOf rdf:resource="&ont;Performer"/>
+        <disjointWith rdf:resource="&ont;IndividualPerformer"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Idiophone -->
+
+    <Class rdf:about="&ont;Idiophone">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd"/>
+        <rdfs:comment>Somehat technical term for the class of percussion instruments with which  a sound is produced by striking a solid body, rather than a membrane or string.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#IndividualPerformer -->
+
+    <Class rdf:about="&ont;IndividualPerformer">
+        <rdfs:subClassOf rdf:resource="&ont;Performer"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#InstrumentalGroupSoundProductionEvent -->
+
+    <Class rdf:about="&ont;InstrumentalGroupSoundProductionEvent">
+        <rdfs:subClassOf rdf:resource="&ont;MusicGroupSoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#InstrumentalMusicalWork -->
+
+    <Class rdf:about="&ont;InstrumentalMusicalWork">
+        <rdfs:subClassOf rdf:resource="&mo;MusicalWork"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#InstrumentalMusician -->
+
+    <Class rdf:about="&ont;InstrumentalMusician">
+        <rdfs:subClassOf rdf:resource="&mo;MusicArtist"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;performanceOfPart"/>
+                <someValuesFrom rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#LateRomanticGenre -->
+
+    <Class rdf:about="&ont;LateRomanticGenre">
+        <rdfs:subClassOf rdf:resource="&ont;RoamnticGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Location -->
+
+    <Class rdf:about="&ont;Location">
+        <disjointWith rdf:resource="&ont;MusicalEvent"/>
+        <disjointWith rdf:resource="&ont;MusicalGenre"/>
+        <rdfs:comment>Locations can be georgraphical (cities, counties, university campuses, neighborhoods, etc.) or more specific venues, such as concert halls, opera houses, or churches.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MaleVoice -->
+
+    <Class rdf:about="&ont;MaleVoice">
+        <rdfs:subClassOf rdf:resource="&ont;SingingVoice"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Marimba -->
+
+    <Class rdf:about="&ont;Marimba">
+        <rdfs:subClassOf rdf:resource="&ont;Idiophone"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MicrotonalGenre -->
+
+    <Class rdf:about="&ont;MicrotonalGenre">
+        <rdfs:subClassOf rdf:resource="&ont;ModernGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MinimalistGenre -->
+
+    <Class rdf:about="&ont;MinimalistGenre">
+        <rdfs:subClassOf rdf:resource="&ont;ModernGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ModernGenre -->
+
+    <Class rdf:about="&ont;ModernGenre">
+        <rdfs:subClassOf rdf:resource="&ont;MusicalGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MusicGroupSoundProductionEvent -->
+
+    <Class rdf:about="&ont;MusicGroupSoundProductionEvent">
+        <rdfs:subClassOf rdf:resource="&ont;SoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MusicalEvent -->
+
+    <Class rdf:about="&ont;MusicalEvent">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;eventHasPerformance"/>
+                <someValuesFrom rdf:resource="&mo;Performance"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <disjointWith rdf:resource="&ont;MusicalGenre"/>
+        <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:comment>A MusicalEvent is a concert or similar presentation of one or more MusicalWorks, each work performed constituting a instance of Performance.  (Preformances of operas or ballets aren&apos;t typically called concerts, hence the slightly clumsy term MusicalEvent is used for this class.)</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MusicalGenre -->
+
+    <Class rdf:about="&ont;MusicalGenre">
+        <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:comment>MusicalGenre is a pretty vague term here, meant to capture something about the style and period of a MusicalWork that establishes some idea of its character.  It is meant to cut across the various categories of MusicalWork; for example, there are Roamntic and TwelveTone String Quartets, Symphonies, Operas, and SongCycles.  The various sublcasses of MusicalGenre aren&apos;t intended to be mutually exclusive, and a given MusicalWork could be assigned to more than one genre (though many combinations would be nonsensical).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MusicalWorkWithDance -->
+
+    <Class rdf:about="&ont;MusicalWorkWithDance">
+        <rdfs:subClassOf rdf:resource="&mo;MusicalWork"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Narration -->
+
+    <Class rdf:about="&ont;Narration">
+        <rdfs:subClassOf rdf:resource="&ont;SpeakingVoice"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Narrator -->
+
+    <Class rdf:about="&ont;Narrator">
+        <rdfs:subClassOf rdf:resource="&ont;Speaker"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#NationalistRomanticGenre -->
+
+    <Class rdf:about="&ont;NationalistRomanticGenre">
+        <rdfs:subClassOf rdf:resource="&ont;RoamnticGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#NeoRomanticGenre -->
+
+    <Class rdf:about="&ont;NeoRomanticGenre">
+        <rdfs:subClassOf rdf:resource="&ont;ModernGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Opera -->
+
+    <Class rdf:about="&ont;Opera">
+        <rdfs:subClassOf rdf:resource="&ont;VocalMusicalWork"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#OperaCompany -->
+
+    <Class rdf:about="&ont;OperaCompany">
+        <rdfs:subClassOf rdf:resource="&mo;MusicGroup"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;performerOfWork"/>
+                <someValuesFrom rdf:resource="&ont;Opera"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#OtherSoundProductionEvent -->
+
+    <Class rdf:about="&ont;OtherSoundProductionEvent">
+        <rdfs:subClassOf rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:comment>This is a catch-all class for types of sound production that occasionally appear in MusicalWorks, such as Whistling, Clapping, or other things that don&apos;t fit under playing an instrument (InstrumentalSoundProductionEvent) or singing (SingingVoice).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Performer -->
+
+    <Class rdf:about="&ont;Performer">
+        <rdfs:subClassOf rdf:resource="&ont;Agent"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;performanceOfPart"/>
+                <someValuesFrom rdf:resource="&ont;SoundProductionEvent"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="&ont;GroupPerformer"/>
+            <rdf:Description rdf:about="&ont;IndividualPerformer"/>
+        </disjointUnionOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PerformingArtsOrganization -->
+
+    <Class rdf:about="&ont;PerformingArtsOrganization">
+        <rdfs:subClassOf rdf:resource="&ont;Agent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Pianist -->
+
+    <Class rdf:about="&ont;Pianist">
+        <rdfs:subClassOf rdf:resource="&ont;InstrumentalMusician"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Piano -->
+
+    <Class rdf:about="&ont;Piano">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RoamnticGenre -->
+
+    <Class rdf:about="&ont;RoamnticGenre">
+        <rdfs:subClassOf rdf:resource="&ont;MusicalGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SerialGenre -->
+
+    <Class rdf:about="&ont;SerialGenre">
+        <rdfs:subClassOf rdf:resource="&ont;ModernGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Singer -->
+
+    <Class rdf:about="&ont;Singer">
+        <rdfs:subClassOf rdf:resource="&mo;MusicArtist"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;singingRegister"/>
+                <someValuesFrom rdf:resource="&ont;SingingVoice"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SingingVoice -->
+
+    <Class rdf:about="&ont;SingingVoice">
+        <rdfs:subClassOf rdf:resource="&ont;SoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SnareDrum -->
+
+    <Class rdf:about="&ont;SnareDrum">
+        <rdfs:subClassOf rdf:resource="&ont;Drum"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SoloInstrumentalWork -->
+
+    <Class rdf:about="&ont;SoloInstrumentalWork">
+        <rdfs:subClassOf rdf:resource="&ont;InstrumentalMusicalWork"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SoloVocalWork -->
+
+    <Class rdf:about="&ont;SoloVocalWork">
+        <rdfs:subClassOf rdf:resource="&ont;VocalMusicalWork"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SopraninoRecorder -->
+
+    <Class rdf:about="&ont;SopraninoRecorder">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SopranoRecorder -->
+
+    <Class rdf:about="&ont;SopranoRecorder">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SopranoVoice -->
+
+    <Class rdf:about="&ont;SopranoVoice">
+        <rdfs:subClassOf rdf:resource="&ont;FemaleVoice"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SoundProductionEvent -->
+
+    <Class rdf:about="&ont;SoundProductionEvent">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;partInPerformance"/>
+                <onClass rdf:resource="&mo;Performance"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;partPerformedBy"/>
+                <someValuesFrom rdf:resource="&ont;Performer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Instances of this class and its subclasses are intended to represent the production of musical sound by a Performer performing a MusicalWork.  For example, a cellist performing as a soloist in a performance of a cello concerto would be an instance of this class.  We do not need to be unnecessarily fine-grained in the instances created in this class.  For iexample, we could create an instance for each of the violinists in a symphony orchestra performing a symphony or its part of a concerto, but it isn&apos;t useful to do so; it&apos;s better to create an single instance of the symphony orchestra (an instance of MusicalEnsemble and hence of Performer) performing the work.
+
+This class is also intended to cover instances of singing and other vocaliztion, whistling, clapping, and playing an instrument -- in short, anything that contributes to the sounds in a MusicalWork.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Speaker -->
+
+    <Class rdf:about="&ont;Speaker">
+        <rdfs:subClassOf rdf:resource="&ont;IndividualPerformer"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SpeakingVoice -->
+
+    <Class rdf:about="&ont;SpeakingVoice">
+        <rdfs:subClassOf rdf:resource="&ont;OtherSoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#StringQuartet -->
+
+    <Class rdf:about="&ont;StringQuartet">
+        <rdfs:subClassOf rdf:resource="&ont;ChamberEnsemble"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;performerOfWork"/>
+                <someValuesFrom rdf:resource="&ont;StringQuartetWork"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#StringQuartetWork -->
+
+    <Class rdf:about="&ont;StringQuartetWork">
+        <rdfs:subClassOf rdf:resource="&ont;ChamberMusicWork"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;workHasPerformer"/>
+                <onClass rdf:resource="&ont;StringQuartet"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SymphonicWork -->
+
+    <Class rdf:about="&ont;SymphonicWork">
+        <rdfs:subClassOf rdf:resource="&ont;InstrumentalMusicalWork"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SymphonyOrchestra -->
+
+    <Class rdf:about="&ont;SymphonyOrchestra">
+        <rdfs:subClassOf rdf:resource="&mo;MusicGroup"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;performerOfWork"/>
+                <someValuesFrom rdf:resource="&ont;SymphonicWork"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Synthesizer -->
+
+    <Class rdf:about="&ont;Synthesizer">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDn6ln50ZiNW7jNQKGSRAY3"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#TenorRecorder -->
+
+    <Class rdf:about="&ont;TenorRecorder">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R9os4pQZbcHAqcV5cfiYO0r"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#TenorVoice -->
+
+    <Class rdf:about="&ont;TenorVoice">
+        <rdfs:subClassOf rdf:resource="&ont;MaleVoice"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Theremin -->
+
+    <Class rdf:about="&ont;Theremin">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDn6ln50ZiNW7jNQKGSRAY3"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#TwelveToneGenre -->
+
+    <Class rdf:about="&ont;TwelveToneGenre">
+        <rdfs:subClassOf rdf:resource="&ont;SerialGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Tympani -->
+
+    <Class rdf:about="&ont;Tympani">
+        <rdfs:subClassOf rdf:resource="&ont;Drum"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#VenueForPerformance -->
+
+    <Class rdf:about="&ont;VenueForPerformance">
+        <rdfs:subClassOf rdf:resource="&ont;Location"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Vibraphone -->
+
+    <Class rdf:about="&ont;Vibraphone">
+        <rdfs:subClassOf rdf:resource="&ont;Idiophone"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Violinist -->
+
+    <Class rdf:about="&ont;Violinist">
+        <rdfs:subClassOf rdf:resource="&ont;InstrumentalMusician"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;playsInstrument"/>
+                <someValuesFrom rdf:resource="http://webprotege.stanford.edu/RjWjRf3AKEKkpMUXZXCIz0"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#VocalMusicalWork -->
+
+    <Class rdf:about="&ont;VocalMusicalWork">
+        <rdfs:subClassOf rdf:resource="&mo;MusicalWork"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#VocalSoundProductionEvent -->
+
+    <Class rdf:about="&ont;VocalSoundProductionEvent">
+        <rdfs:subClassOf rdf:resource="&ont;MusicGroupSoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Whistling -->
+
+    <Class rdf:about="&ont;Whistling">
+        <rdfs:subClassOf rdf:resource="&ont;OtherSoundProductionEvent"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/apps/bmir.apps/web-protege-data/uploads/#band-1 -->
+
+    <NamedIndividual rdf:about="file:/apps/bmir.apps/web-protege-data/uploads/#band-1">
+        <rdf:type rdf:resource="&mo;MusicGroup"/>
+        <foaf:name>Fugazi</foaf:name>
+        <foaf:member rdf:resource="file:/apps/bmir.apps/web-protege-data/uploads/#bc"/>
+        <foaf:member rdf:resource="file:/apps/bmir.apps/web-protege-data/uploads/#gp"/>
+        <foaf:member rdf:resource="file:/apps/bmir.apps/web-protege-data/uploads/#imk"/>
+        <foaf:member rdf:resource="file:/apps/bmir.apps/web-protege-data/uploads/#jl"/>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/apps/bmir.apps/web-protege-data/uploads/#bc -->
+
+    <NamedIndividual rdf:about="file:/apps/bmir.apps/web-protege-data/uploads/#bc">
+        <rdf:type rdf:resource="&mo;MusicArtist"/>
+        <foaf:name>Brendan Canty</foaf:name>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/apps/bmir.apps/web-protege-data/uploads/#composition -->
+
+    <NamedIndividual rdf:about="file:/apps/bmir.apps/web-protege-data/uploads/#composition">
+        <rdf:type rdf:resource="&mo;Performance"/>
+        <rdfs:label>Composition of The Art of Fugue, BWV 1080: Contrapunctus IX, a 4, alla Duodecima</rdfs:label>
+        <skos:prefLabel>The Art of the Fugue, BWV 1080</skos:prefLabel>
+        <mo:produced_work rdf:resource="file:/apps/bmir.apps/web-protege-data/uploads/#kunst-der-fuge"/>
+        <mo:composer rdf:resource="http://dbpedia.org/resource/Johann_Sebastian_Bach"/>
+        <event:time>
+            <rdf:Description/>
+        </event:time>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/apps/bmir.apps/web-protege-data/uploads/#gp -->
+
+    <NamedIndividual rdf:about="file:/apps/bmir.apps/web-protege-data/uploads/#gp">
+        <rdf:type rdf:resource="&mo;MusicArtist"/>
+        <foaf:name>Guy Picciotto</foaf:name>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/apps/bmir.apps/web-protege-data/uploads/#imk -->
+
+    <NamedIndividual rdf:about="file:/apps/bmir.apps/web-protege-data/uploads/#imk">
+        <rdf:type rdf:resource="&mo;MusicArtist"/>
+        <foaf:name>Ian MacKaye</foaf:name>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/apps/bmir.apps/web-protege-data/uploads/#jl -->
+
+    <NamedIndividual rdf:about="file:/apps/bmir.apps/web-protege-data/uploads/#jl">
+        <rdf:type rdf:resource="&mo;MusicArtist"/>
+        <foaf:name>Joe Lally</foaf:name>
+    </NamedIndividual>
+    
+
+
+    <!-- file:/apps/bmir.apps/web-protege-data/uploads/#kunst-der-fuge -->
+
+    <NamedIndividual rdf:about="file:/apps/bmir.apps/web-protege-data/uploads/#kunst-der-fuge">
+        <rdf:type rdf:resource="&ont;InstrumentalMusicalWork"/>
+        <dc:title>The Art of Fugue, BWV 1080: Contrapunctus IX, a 4, alla Duodecima</dc:title>
+    </NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Johann_Sebastian_Bach -->
+
+    <NamedIndividual rdf:about="http://dbpedia.org/resource/Johann_Sebastian_Bach">
+        <rdf:type rdf:resource="&mo;MusicArtist"/>
+        <foaf:name>Johann Sebastian Bach</foaf:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://etree.linkedmusic.org/performance/Mogwai1996-05-18 -->
+
+    <NamedIndividual rdf:about="http://etree.linkedmusic.org/performance/Mogwai1996-05-18">
+        <rdf:type rdf:resource="&mo;Performance"/>
+        <rdfs:label>A performance by Mogwai</rdfs:label>
+        <dc:date rdf:datatype="&xsd;date">1996-05-18</dc:date>
+        <event:sub_event rdf:resource="http://etree.linkedmusic.org/track/Mogwai1996-05-18-1"/>
+        <event:place rdf:resource="http://etree.linkedmusic.org/venue/Mogwai1996-05-18"/>
+        <mo:performer rdf:resource="http://musicbrainz.org/artist/d700b3f5-45af-4d02-95ed-57d301bda93e#_"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://musicbrainz.org/artist/233fc3f3-6de2-465c-985e-e721dbabbace -->
+
+    <NamedIndividual rdf:about="http://musicbrainz.org/artist/233fc3f3-6de2-465c-985e-e721dbabbace">
+        <rdf:type rdf:resource="&mo;MusicGroup"/>
+        <foaf:name>Fugazi</foaf:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BethesdaMD -->
+
+    <NamedIndividual rdf:about="&ont;BethesdaMD">
+        <rdf:type rdf:resource="&ont;GeograhicalLocation"/>
+        <ont:locatedIn rdf:resource="&ont;MontgomeryCountyMD"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ClariceSmithCenter -->
+
+    <NamedIndividual rdf:about="&ont;ClariceSmithCenter">
+        <rdf:type rdf:resource="&ont;VenueForPerformance"/>
+        <ont:locatedIn rdf:resource="&ont;CollegeParkMD"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CollegeParkMD -->
+
+    <NamedIndividual rdf:about="&ont;CollegeParkMD">
+        <rdf:type rdf:resource="&ont;GeograhicalLocation"/>
+        <ont:locatedIn rdf:resource="&ont;PrinceGeorgesCountyMD"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#EmersonStringQuartet -->
+
+    <NamedIndividual rdf:about="&ont;EmersonStringQuartet">
+        <rdf:type rdf:resource="&ont;StringQuartet"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#FairfaxCityVA -->
+
+    <NamedIndividual rdf:about="&ont;FairfaxCityVA">
+        <rdf:type rdf:resource="&ont;GeograhicalLocation"/>
+        <ont:locatedIn rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
+        <ont:locatedIn rdf:resource="&ont;Virginia"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#FiarfaxCountyVA -->
+
+    <NamedIndividual rdf:about="&ont;FiarfaxCountyVA">
+        <rdf:type rdf:resource="&ont;GeograhicalLocation"/>
+        <ont:locatedIn rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
+        <ont:locatedIn rdf:resource="&ont;Virginia"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GMUCenter -->
+
+    <NamedIndividual rdf:about="&ont;GMUCenter">
+        <rdf:type rdf:resource="&ont;VenueForPerformance"/>
+        <ont:locatedIn rdf:resource="&ont;FairfaxCityVA"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GustavMahler -->
+
+    <NamedIndividual rdf:about="&ont;GustavMahler">
+        <rdf:type rdf:resource="&ont;Composer"/>
+        <ont:composerOfWork rdf:resource="&ont;SymphonyNo4_Mahler"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Harmonielehre_Adams -->
+
+    <NamedIndividual rdf:about="&ont;Harmonielehre_Adams">
+        <rdf:type rdf:resource="&ont;SymphonicWork"/>
+        <ont:workComposedBy rdf:resource="&ont;JohnAdams"/>
+        <ont:workHasPerformer rdf:resource="&ont;KlausTenstedt"/>
+        <ont:workHasPerformer rdf:resource="&ont;LondonPhilharmonic"/>
+        <ont:workPerformed rdf:resource="&ont;sample_concert_perf_of_Harmonielehre_Adams"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#JohnAdams -->
+
+    <NamedIndividual rdf:about="&ont;JohnAdams">
+        <rdf:type rdf:resource="&ont;Composer"/>
+        <ont:composerOfWork rdf:resource="&ont;Harmonielehre_Adams"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#KennedyCenter -->
+
+    <NamedIndividual rdf:about="&ont;KennedyCenter">
+        <rdf:type rdf:resource="&ont;VenueForPerformance"/>
+        <ont:locatedIn rdf:resource="&ont;WashingtonDC"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#KlausTenstedt -->
+
+    <NamedIndividual rdf:about="&ont;KlausTenstedt">
+        <rdf:type rdf:resource="&ont;Conductor"/>
+        <ont:performerIn rdf:resource="&ont;sample_concert_perf_of_Harmonielehre_Adams"/>
+        <ont:performerIn rdf:resource="&ont;sample_concert_perf_of_SymphonyNo4_Mahler"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#KronosQuartet -->
+
+    <NamedIndividual rdf:about="&ont;KronosQuartet">
+        <rdf:type rdf:resource="&ont;StringQuartet"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#LondonPhilharmonic -->
+
+    <NamedIndividual rdf:about="&ont;LondonPhilharmonic">
+        <rdf:type rdf:resource="&ont;SymphonyOrchestra"/>
+        <ont:performerIn rdf:resource="&ont;sample_concert_perf_of_Harmonielehre_Adams"/>
+        <ont:performerIn rdf:resource="&ont;sample_concert_perf_of_SymphonyNo4_Mahler"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#LondonPhilharmonic_sample_concert_Harmonielehre_Adams -->
+
+    <NamedIndividual rdf:about="&ont;LondonPhilharmonic_sample_concert_Harmonielehre_Adams">
+        <rdf:type rdf:resource="&ont;InstrumentalGroupSoundProductionEvent"/>
+        <ont:partPerformedBy rdf:resource="&ont;LondonPhilharmonic"/>
+        <ont:partInPerformance rdf:resource="&ont;sample_concert_perf_of_Harmonielehre_Adams"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#LondonPhilharmonic_sample_concert_SymphonyNo4_Mahler -->
+
+    <NamedIndividual rdf:about="&ont;LondonPhilharmonic_sample_concert_SymphonyNo4_Mahler">
+        <rdf:type rdf:resource="&ont;InstrumentalGroupSoundProductionEvent"/>
+        <ont:partPerformedBy rdf:resource="&ont;LondonPhilharmonic"/>
+        <ont:partInPerformance rdf:resource="&ont;sample_concert_perf_of_SymphonyNo4_Mahler"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#LuciaPopp -->
+
+    <NamedIndividual rdf:about="&ont;LuciaPopp">
+        <rdf:type rdf:resource="&ont;Singer"/>
+        <ont:performerIn rdf:resource="&ont;sample_concert_perf_of_SymphonyNo4_Mahler"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#LuciaPopp_sample_concert_SymphonyNo4_Mahler -->
+
+    <NamedIndividual rdf:about="&ont;LuciaPopp_sample_concert_SymphonyNo4_Mahler">
+        <rdf:type rdf:resource="&ont;SopranoVoice"/>
+        <ont:partPerformedBy rdf:resource="&ont;LuciaPopp"/>
+        <ont:partInPerformance rdf:resource="&ont;sample_concert_perf_of_SymphonyNo4_Mahler"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Maryland -->
+
+    <NamedIndividual rdf:about="&ont;Maryland">
+        <rdf:type rdf:resource="&ont;GeograhicalLocation"/>
+        <ont:locationsOverlap rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MetroAreaOfWashingtonDC -->
+
+    <NamedIndividual rdf:about="&ont;MetroAreaOfWashingtonDC">
+        <rdf:type rdf:resource="&ont;GeograhicalLocation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MontgomeryCountyMD -->
+
+    <NamedIndividual rdf:about="&ont;MontgomeryCountyMD">
+        <rdf:type rdf:resource="&ont;GeograhicalLocation"/>
+        <rdfs:comment>Known for Strathmore, a lack of comprehensive universities, and crazy liquor laws.</rdfs:comment>
+        <ont:locatedIn rdf:resource="&ont;Maryland"/>
+        <ont:locatedIn rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#NationalSymphonyOrchestraOfWashington -->
+
+    <NamedIndividual rdf:about="&ont;NationalSymphonyOrchestraOfWashington">
+        <rdf:type rdf:resource="&ont;SymphonyOrchestra"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#NorthBethesdaMD -->
+
+    <NamedIndividual rdf:about="&ont;NorthBethesdaMD">
+        <rdf:type rdf:resource="&ont;GeograhicalLocation"/>
+        <rdfs:comment>A geographical expression motivated primarily by wishful thinking</rdfs:comment>
+        <ont:locatedIn rdf:resource="&ont;BethesdaMD"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PrinceGeorgesCountyMD -->
+
+    <NamedIndividual rdf:about="&ont;PrinceGeorgesCountyMD">
+        <rdf:type rdf:resource="&ont;GeograhicalLocation"/>
+        <ont:locatedIn rdf:resource="&ont;Maryland"/>
+        <ont:locatedIn rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Strathmore -->
+
+    <NamedIndividual rdf:about="&ont;Strathmore">
+        <rdf:type rdf:resource="&ont;VenueForPerformance"/>
+        <ont:locatedIn rdf:resource="&ont;NorthBethesdaMD"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SymphonyNo4_Mahler -->
+
+    <NamedIndividual rdf:about="&ont;SymphonyNo4_Mahler">
+        <rdf:type rdf:resource="&ont;SymphonicWork"/>
+        <ont:workComposedBy rdf:resource="&ont;GustavMahler"/>
+        <ont:workHasPerformer rdf:resource="&ont;KlausTenstedt"/>
+        <ont:workHasPerformer rdf:resource="&ont;LondonPhilharmonic"/>
+        <ont:workHasPerformer rdf:resource="&ont;LuciaPopp"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Virginia -->
+
+    <NamedIndividual rdf:about="&ont;Virginia">
+        <rdf:type rdf:resource="&ont;GeograhicalLocation"/>
+        <ont:locationsOverlap rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#WashingtonDC -->
+
+    <NamedIndividual rdf:about="&ont;WashingtonDC">
+        <rdf:type rdf:resource="&ont;GeograhicalLocation"/>
+        <ont:locatedIn rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#WashingtonNationalOpera -->
+
+    <NamedIndividual rdf:about="&ont;WashingtonNationalOpera">
+        <rdf:type rdf:resource="&ont;OperaCompany"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#sample_concert -->
+
+    <NamedIndividual rdf:about="&ont;sample_concert">
+        <rdf:type rdf:resource="&ont;MusicalEvent"/>
+        <ont:eventHasPerformance rdf:resource="&ont;sample_concert_perf_of_Harmonielehre_Adams"/>
+        <ont:eventHasPerformance rdf:resource="&ont;sample_concert_perf_of_SymphonyNo4_Mahler"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#sample_concert_perf_of_Harmonielehre_Adams -->
+
+    <NamedIndividual rdf:about="&ont;sample_concert_perf_of_Harmonielehre_Adams">
+        <rdf:type rdf:resource="&mo;Performance"/>
+        <ont:performanceOf rdf:resource="&ont;Harmonielehre_Adams"/>
+        <ont:performedBy rdf:resource="&ont;KlausTenstedt"/>
+        <ont:performedBy rdf:resource="&ont;LondonPhilharmonic"/>
+        <ont:hasPerformedPart rdf:resource="&ont;LondonPhilharmonic_sample_concert_Harmonielehre_Adams"/>
+        <ont:performanceInEvent rdf:resource="&ont;sample_concert"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#sample_concert_perf_of_SymphonyNo4_Mahler -->
+
+    <NamedIndividual rdf:about="&ont;sample_concert_perf_of_SymphonyNo4_Mahler">
+        <rdf:type rdf:resource="&mo;Performance"/>
+        <ont:performedBy rdf:resource="&ont;KlausTenstedt"/>
+        <ont:performedBy rdf:resource="&ont;LondonPhilharmonic"/>
+        <ont:hasPerformedPart rdf:resource="&ont;LondonPhilharmonic_sample_concert_SymphonyNo4_Mahler"/>
+        <ont:performedBy rdf:resource="&ont;LuciaPopp"/>
+        <ont:hasPerformedPart rdf:resource="&ont;LuciaPopp_sample_concert_SymphonyNo4_Mahler"/>
+        <ont:performanceOf rdf:resource="&ont;SymphonyNo4_Mahler"/>
+        <ont:performanceInEvent rdf:resource="&ont;sample_concert"/>
+    </NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>viola</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>cello</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>first violin</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>second violin</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://musicbrainz.org/artist/422aecc0-4aac-012f-19e9-00254bd44c28#_">
+        <foaf:name>Mogwai</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://etree.linkedmusic.org/track/Mogwai1996-05-18-1">
+        <rdfs:label>Summer</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="file:/apps/bmir.apps/web-protege-data/uploads/#track-1">
+        <dc:title>Turnover</dc:title>
+        <foaf:maker rdf:resource="http://musicbrainz.org/artist/233fc3f3-6de2-465c-985e-e721dbabbace#_"/>
+    </rdf:Description>
+</rdf:RDF>
 
 
 
