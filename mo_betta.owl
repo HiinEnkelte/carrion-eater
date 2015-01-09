@@ -160,6 +160,16 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#componentOfScoring -->
+
+    <ObjectProperty rdf:about="&ont;componentOfScoring">
+        <rdfs:domain rdf:resource="&ont;MusicalScoreComponent"/>
+        <rdfs:range rdf:resource="&ont;ScoringOfMusicalWork"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;partOf"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#composerOfWork -->
 
     <ObjectProperty rdf:about="&ont;composerOfWork">
@@ -190,6 +200,15 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasMusicalScoring -->
+
+    <ObjectProperty rdf:about="&ont;hasMusicalScoring">
+        <rdfs:domain rdf:resource="&mo;MusicalWork"/>
+        <rdfs:range rdf:resource="&ont;ScoringOfMusicalWork"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#hasPart -->
 
     <ObjectProperty rdf:about="&ont;hasPart">
@@ -206,6 +225,17 @@
         <rdfs:range rdf:resource="&ont;SoundProductionEvent"/>
         <rdfs:subPropertyOf rdf:resource="&ont;hasPart"/>
         <inverseOf rdf:resource="&ont;partInPerformance"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#hasScoreComponent -->
+
+    <ObjectProperty rdf:about="&ont;hasScoreComponent">
+        <rdfs:range rdf:resource="&ont;MusicalScoreComponent"/>
+        <rdfs:domain rdf:resource="&ont;ScoringOfMusicalWork"/>
+        <inverseOf rdf:resource="&ont;componentOfScoring"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;hasPart"/>
     </ObjectProperty>
     
 
@@ -230,12 +260,52 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#memberOfMusicalEventGroup -->
+
+    <ObjectProperty rdf:about="&ont;memberOfMusicalEventGroup">
+        <rdfs:range rdf:resource="&ont;GroupedMusicalEvents"/>
+        <rdfs:domain rdf:resource="&ont;MusicalEvent"/>
+        <inverseOf rdf:resource="&ont;musicalEventGroupHasMember"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;partOf"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#memberOfPerformingGroup -->
 
     <ObjectProperty rdf:about="&ont;memberOfPerformingGroup">
         <rdfs:range rdf:resource="&ont;GroupPerformer"/>
         <rdfs:domain rdf:resource="&ont;IndividualPerformer"/>
         <rdfs:subPropertyOf rdf:resource="&ont;partOf"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#musicalEventGroupHasMember -->
+
+    <ObjectProperty rdf:about="&ont;musicalEventGroupHasMember">
+        <rdfs:domain rdf:resource="&ont;GroupedMusicalEvents"/>
+        <rdfs:range rdf:resource="&ont;MusicalEvent"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;hasPart"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#musicalScoringOf -->
+
+    <ObjectProperty rdf:about="&ont;musicalScoringOf">
+        <rdfs:range rdf:resource="&mo;MusicalWork"/>
+        <rdfs:domain rdf:resource="&ont;ScoringOfMusicalWork"/>
+        <inverseOf rdf:resource="&ont;hasMusicalScoring"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#musicalSkill -->
+
+    <ObjectProperty rdf:about="&ont;musicalSkill">
+        <rdfs:range rdf:resource="&ont;MusicalScoreComponent"/>
+        <rdfs:domain rdf:resource="&ont;Performer"/>
     </ObjectProperty>
     
 
@@ -345,9 +415,28 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#playsInstrument -->
 
     <ObjectProperty rdf:about="&ont;playsInstrument">
-        <rdfs:range rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+        <rdfs:range rdf:resource="&mo;InstrumentalScoreComponent"/>
         <rdfs:domain rdf:resource="&ont;InstrumentalMusician"/>
-        <rdfs:subPropertyOf rdf:resource="&ont;performanceOfPart"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;musicalSkill"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#productionOfScoreComponent -->
+
+    <ObjectProperty rdf:about="&ont;productionOfScoreComponent">
+        <rdfs:domain rdf:resource="&ont;MusicalScoreComponent"/>
+        <rdfs:range rdf:resource="&ont;SoundProductionEvent"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#scoreComponentProduced -->
+
+    <ObjectProperty rdf:about="&ont;scoreComponentProduced">
+        <rdfs:range rdf:resource="&ont;MusicalScoreComponent"/>
+        <rdfs:domain rdf:resource="&ont;SoundProductionEvent"/>
+        <inverseOf rdf:resource="&ont;productionOfScoreComponent"/>
     </ObjectProperty>
     
 
@@ -357,7 +446,7 @@
     <ObjectProperty rdf:about="&ont;singingRegister">
         <rdfs:domain rdf:resource="&ont;Singer"/>
         <rdfs:range rdf:resource="&ont;SingingVoice"/>
-        <rdfs:subPropertyOf rdf:resource="&ont;performanceOfPart"/>
+        <rdfs:subPropertyOf rdf:resource="&ont;musicalSkill"/>
     </ObjectProperty>
     
 
@@ -403,10 +492,10 @@
     
 
 
-    <!-- http://purl.org/ontology/mo/InstrumentalSoundProductionEvent -->
+    <!-- http://purl.org/ontology/mo/InstrumentalScoreComponent -->
 
-    <Class rdf:about="&mo;InstrumentalSoundProductionEvent">
-        <rdfs:subClassOf rdf:resource="&ont;SoundProductionEvent"/>
+    <Class rdf:about="&mo;InstrumentalScoreComponent">
+        <rdfs:subClassOf rdf:resource="&ont;MusicalScoreComponent"/>
         <rdfs:comment>As a sublcass of SoundProductionEvent, this class has instances intended to represent the production of musical sound by a Performer performing a MusicalWork.  To avoid clumsy names, the subclasses are named by instruments and families of instruments, but keep in mind that, e.g., the subclass Flute actually denotes the flutist&apos;s production of sound in a Performance of a MusicalWork.</rdfs:comment>
     </Class>
     
@@ -433,9 +522,12 @@
     <Class rdf:about="&mo;MusicalWork">
         <disjointWith rdf:resource="&mo;Performance"/>
         <disjointWith rdf:resource="&ont;Agent"/>
+        <disjointWith rdf:resource="&ont;GroupedMusicalEvents"/>
         <disjointWith rdf:resource="&ont;Location"/>
         <disjointWith rdf:resource="&ont;MusicalEvent"/>
         <disjointWith rdf:resource="&ont;MusicalGenre"/>
+        <disjointWith rdf:resource="&ont;MusicalScoreComponent"/>
+        <disjointWith rdf:resource="&ont;ScoringOfMusicalWork"/>
         <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
         <rdfs:comment>The class of musical compositions, in the abstract, not as manifested in individual Performances.  There are some borderline cases of what constitutes a distinct MusicalWork: ranging from slight differences in performance (transposition, playing a harpsichord piece on a modern piano), to substantially different arrangements (orchestrating a piano piece for full orchestra), to loose adaptations (one composer&apos;s variations on another&apos;s theme).  We will probably just try to be practical rather than punctilious regarding these cases.</rdfs:comment>
     </Class>
@@ -447,15 +539,15 @@
     <Class rdf:about="&mo;Performance">
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;performanceOf"/>
-                <onClass rdf:resource="&mo;MusicalWork"/>
-                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                <onProperty rdf:resource="&ont;hasPerformedPart"/>
+                <someValuesFrom rdf:resource="&ont;SoundProductionEvent"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;hasPerformedPart"/>
-                <someValuesFrom rdf:resource="&ont;SoundProductionEvent"/>
+                <onProperty rdf:resource="&ont;performanceOf"/>
+                <onClass rdf:resource="&mo;MusicalWork"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -465,9 +557,12 @@
             </Restriction>
         </rdfs:subClassOf>
         <disjointWith rdf:resource="&ont;Agent"/>
+        <disjointWith rdf:resource="&ont;GroupedMusicalEvents"/>
         <disjointWith rdf:resource="&ont;Location"/>
         <disjointWith rdf:resource="&ont;MusicalEvent"/>
         <disjointWith rdf:resource="&ont;MusicalGenre"/>
+        <disjointWith rdf:resource="&ont;MusicalScoreComponent"/>
+        <disjointWith rdf:resource="&ont;ScoringOfMusicalWork"/>
         <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
         <rdfs:comment>Each instance of Performance is an individual performance of a single MusicalWork, by a set of one or more Performers.  If a concert is repeated, then there&apos;s a separate instance of Performance for each time the MusicalWork is played.</rdfs:comment>
     </Class>
@@ -478,7 +573,7 @@
 
     <Class rdf:about="http://webprotege.stanford.edu/R79ayMV50gXB0mlrIxmnmoG">
         <rdfs:label>KeyboardInstrument</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
     </Class>
     
 
@@ -550,7 +645,7 @@
 
     <Class rdf:about="http://webprotege.stanford.edu/R83e4pl4Og9D6SHnI3vuzv8">
         <rdfs:label>BrassInstrument</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
     </Class>
     
 
@@ -604,7 +699,7 @@
 
     <Class rdf:about="http://webprotege.stanford.edu/R8tc9aNuTL6fjA7nC4kJJpF">
         <rdfs:label>StringInstrument</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
     </Class>
     
 
@@ -784,7 +879,7 @@
 
     <Class rdf:about="http://webprotege.stanford.edu/RDn6ln50ZiNW7jNQKGSRAY3">
         <rdfs:label>ElectronicInstrument</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
         <rdfs:comment>This class is meant to include all musical sound production via an electronic instrument, broadly defined, such as a synthesizer or an electric guitar.</rdfs:comment>
     </Class>
     
@@ -803,7 +898,7 @@
 
     <Class rdf:about="http://webprotege.stanford.edu/RK4Ci66Ms4QcuW2hNuOKJd">
         <rdfs:label>PercussionInstrument</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
     </Class>
     
 
@@ -839,7 +934,7 @@
 
     <Class rdf:about="http://webprotege.stanford.edu/Rj7l6RrRtNstBFd3vyU6fl">
         <rdfs:label>WoodwindInstrument</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
     </Class>
     
 
@@ -900,9 +995,12 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Agent -->
 
     <Class rdf:about="&ont;Agent">
+        <disjointWith rdf:resource="&ont;GroupedMusicalEvents"/>
         <disjointWith rdf:resource="&ont;Location"/>
         <disjointWith rdf:resource="&ont;MusicalEvent"/>
         <disjointWith rdf:resource="&ont;MusicalGenre"/>
+        <disjointWith rdf:resource="&ont;MusicalScoreComponent"/>
+        <disjointWith rdf:resource="&ont;ScoringOfMusicalWork"/>
         <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
         <rdfs:comment>A class subsuming humans and organizations, here in the context of the creation and performance of MusicalWorks.  This class is mostly a handy grouping that enables us to make a few useful statements (e.g., Agents are disjiont from MusicalWorks and Perfomances).</rdfs:comment>
     </Class>
@@ -1011,17 +1109,17 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="&ont;performanceOfPart"/>
-                <someValuesFrom rdf:resource="&ont;VocalSoundProductionEvent"/>
+                <someValuesFrom rdf:resource="&ont;VocalGroupScoreComponent"/>
             </Restriction>
         </rdfs:subClassOf>
     </Class>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#ChoralSoundProductionEvent -->
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ChoralScoreComponent -->
 
-    <Class rdf:about="&ont;ChoralSoundProductionEvent">
-        <rdfs:subClassOf rdf:resource="&ont;VocalSoundProductionEvent"/>
+    <Class rdf:about="&ont;ChoralScoreComponent">
+        <rdfs:subClassOf rdf:resource="&ont;VocalGroupScoreComponent"/>
     </Class>
     
 
@@ -1037,7 +1135,7 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#Clapping -->
 
     <Class rdf:about="&ont;Clapping">
-        <rdfs:subClassOf rdf:resource="&ont;OtherSoundProductionEvent"/>
+        <rdfs:subClassOf rdf:resource="&ont;OtherScoreComponent"/>
     </Class>
     
 
@@ -1197,6 +1295,30 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GroupScoreComponent -->
+
+    <Class rdf:about="&ont;GroupScoreComponent">
+        <rdfs:subClassOf rdf:resource="&ont;MusicalScoreComponent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#GroupedMusicalEvents -->
+
+    <Class rdf:about="&ont;GroupedMusicalEvents">
+        <disjointWith rdf:resource="&ont;Location"/>
+        <disjointWith rdf:resource="&ont;MusicalEvent"/>
+        <disjointWith rdf:resource="&ont;MusicalGenre"/>
+        <disjointWith rdf:resource="&ont;MusicalScoreComponent"/>
+        <disjointWith rdf:resource="&ont;ScoringOfMusicalWork"/>
+        <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:comment>Instances of this class are groups of MusicalEvents that are related in some fashion that&apos;s meaningful and useful.  For instance, it often happens that the same, or nearly the same, concernt is presented multiple times.  Each of those is a distinct MusicalEvent (you could buy a ticket for each).  However, since (near) identical concerts are often listed together, it&apos;s useful to represent these multiple presentations as well, and GroupedMusicalEvents serves this purpose, relating the group to the individual MusicalEvents via the property musicalEventGroupHasMember.
+
+It might be possible to use this class to represent groups of events like concert series, whole season, events sharing a performer, and so on.  This should be decided later.</rdfs:comment>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#Idiophone -->
 
     <Class rdf:about="&ont;Idiophone">
@@ -1214,10 +1336,10 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#InstrumentalGroupSoundProductionEvent -->
+    <!-- http://www.co-ode.org/ontologies/ont.owl#InstrumentalGroupScoreComponent -->
 
-    <Class rdf:about="&ont;InstrumentalGroupSoundProductionEvent">
-        <rdfs:subClassOf rdf:resource="&ont;MusicGroupSoundProductionEvent"/>
+    <Class rdf:about="&ont;InstrumentalGroupScoreComponent">
+        <rdfs:subClassOf rdf:resource="&ont;GroupScoreComponent"/>
     </Class>
     
 
@@ -1236,8 +1358,8 @@
         <rdfs:subClassOf rdf:resource="&mo;MusicArtist"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;performanceOfPart"/>
-                <someValuesFrom rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+                <onProperty rdf:resource="&ont;playsInstrument"/>
+                <someValuesFrom rdf:resource="&mo;InstrumentalScoreComponent"/>
             </Restriction>
         </rdfs:subClassOf>
     </Class>
@@ -1257,6 +1379,8 @@
     <Class rdf:about="&ont;Location">
         <disjointWith rdf:resource="&ont;MusicalEvent"/>
         <disjointWith rdf:resource="&ont;MusicalGenre"/>
+        <disjointWith rdf:resource="&ont;MusicalScoreComponent"/>
+        <disjointWith rdf:resource="&ont;ScoringOfMusicalWork"/>
         <rdfs:comment>Locations can be georgraphical (cities, counties, university campuses, neighborhoods, etc.) or more specific venues, such as concert halls, opera houses, or churches.</rdfs:comment>
     </Class>
     
@@ -1302,14 +1426,6 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#MusicGroupSoundProductionEvent -->
-
-    <Class rdf:about="&ont;MusicGroupSoundProductionEvent">
-        <rdfs:subClassOf rdf:resource="&ont;SoundProductionEvent"/>
-    </Class>
-    
-
-
     <!-- http://www.co-ode.org/ontologies/ont.owl#MusicalEvent -->
 
     <Class rdf:about="&ont;MusicalEvent">
@@ -1320,8 +1436,12 @@
             </Restriction>
         </rdfs:subClassOf>
         <disjointWith rdf:resource="&ont;MusicalGenre"/>
+        <disjointWith rdf:resource="&ont;MusicalScoreComponent"/>
+        <disjointWith rdf:resource="&ont;ScoringOfMusicalWork"/>
         <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
-        <rdfs:comment>A MusicalEvent is a concert or similar presentation of one or more MusicalWorks, each work performed constituting a instance of Performance.  (Preformances of operas or ballets aren&apos;t typically called concerts, hence the slightly clumsy term MusicalEvent is used for this class.)</rdfs:comment>
+        <rdfs:comment>A MusicalEvent is a concert or similar presentation of one or more MusicalWorks, each work performed constituting an instance of Performance.  (Preformances of operas or ballets aren&apos;t typically called concerts, hence the slightly clumsy term MusicalEvent is used for this class.)
+
+Note that members of this class have a specific date, time, and venue; they are events that you&apos;d buy a ticket for.  If the same, or nearly the same, program is presented multiple times, then each of those is a distinct MusicalEvent (you could buy a ticket for each).  However, since (near) identical concerts are often listed together, it&apos;s useful to represent these multiple presentations as well -- use GroupedMusicalEvents for this purpose.</rdfs:comment>
     </Class>
     
 
@@ -1329,8 +1449,29 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#MusicalGenre -->
 
     <Class rdf:about="&ont;MusicalGenre">
+        <disjointWith rdf:resource="&ont;MusicalScoreComponent"/>
+        <disjointWith rdf:resource="&ont;ScoringOfMusicalWork"/>
         <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
         <rdfs:comment>MusicalGenre is a pretty vague term here, meant to capture something about the style and period of a MusicalWork that establishes some idea of its character.  It is meant to cut across the various categories of MusicalWork; for example, there are Roamntic and TwelveTone String Quartets, Symphonies, Operas, and SongCycles.  The various sublcasses of MusicalGenre aren&apos;t intended to be mutually exclusive, and a given MusicalWork could be assigned to more than one genre (though many combinations would be nonsensical).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#MusicalScoreComponent -->
+
+    <Class rdf:about="&ont;MusicalScoreComponent">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;componentOfScoring"/>
+                <onClass rdf:resource="&ont;ScoringOfMusicalWork"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <disjointWith rdf:resource="&ont;ScoringOfMusicalWork"/>
+        <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:comment>Members of this class are the elements of a ScoringOfMusicalWork, representing the instruments, voices, or other sound producing mechanisms called for in (that version of) that work.  Each element is related to the ScoringOfMusicalWork via the componentOfScoring property.
+
+There are subclasses of this class that serve as useful shorthand, so as not to require specifying everything about the scoring of a piece.  Thus for an orchestral work, an instance of OrchestralGroupScoreComponent can be used, rather than specifying each instrument in the orchestra.  Also, score components for instruments and voices are arranged in a hierarchy, so that a component can be specified as, e.g., Clarinet, rather than having to specify BflatClarinet or EflatClarinet.</rdfs:comment>
     </Class>
     
 
@@ -1397,10 +1538,18 @@
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#OtherSoundProductionEvent -->
+    <!-- http://www.co-ode.org/ontologies/ont.owl#OrchestralScoreComponent -->
 
-    <Class rdf:about="&ont;OtherSoundProductionEvent">
-        <rdfs:subClassOf rdf:resource="&ont;SoundProductionEvent"/>
+    <Class rdf:about="&ont;OrchestralScoreComponent">
+        <rdfs:subClassOf rdf:resource="&ont;InstrumentalGroupScoreComponent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#OtherScoreComponent -->
+
+    <Class rdf:about="&ont;OtherScoreComponent">
+        <rdfs:subClassOf rdf:resource="&ont;MusicalScoreComponent"/>
         <rdfs:comment>This is a catch-all class for types of sound production that occasionally appear in MusicalWorks, such as Whistling, Clapping, or other things that don&apos;t fit under playing an instrument (InstrumentalSoundProductionEvent) or singing (SingingVoice).</rdfs:comment>
     </Class>
     
@@ -1456,6 +1605,31 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ScoringOfMusicalWork -->
+
+    <Class rdf:about="&ont;ScoringOfMusicalWork">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;musicalScoringOf"/>
+                <someValuesFrom rdf:resource="&mo;MusicalWork"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;hasScoreComponent"/>
+                <someValuesFrom rdf:resource="&ont;MusicalScoreComponent"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:comment>Every MusicalWork is assumed to scored for some specified combination of instruments, voices, or other sound-producing mechanims.  Members of this class represent those combinations, each one being relatied to a set of MusicalScoreComponents via the hasScoreComponent property.
+
+A MusicalWork can have more than one ScoringOfMusicalWork.  For example, there might be a version of a work for piano, and another for orchestra.  These might sometimes correspond to different versions of a work by the same composer, or to arrangements of one composer&apos;s work by another.
+
+As with any attempt to distinguish the case of two versions of the same work from two simoilar, yet distinct, works, there will be some borderline cases that are arguable.</rdfs:comment>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#SerialGenre -->
 
     <Class rdf:about="&ont;SerialGenre">
@@ -1481,7 +1655,7 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#SingingVoice -->
 
     <Class rdf:about="&ont;SingingVoice">
-        <rdfs:subClassOf rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:subClassOf rdf:resource="&ont;MusicalScoreComponent"/>
     </Class>
     
 
@@ -1550,6 +1724,12 @@
                 <someValuesFrom rdf:resource="&ont;Performer"/>
             </Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;scoreComponentProduced"/>
+                <someValuesFrom rdf:resource="&ont;MusicalScoreComponent"/>
+            </Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Instances of this class and its subclasses are intended to represent the production of musical sound by a Performer performing a MusicalWork.  For example, a cellist performing as a soloist in a performance of a cello concerto would be an instance of this class.  We do not need to be unnecessarily fine-grained in the instances created in this class.  For iexample, we could create an instance for each of the violinists in a symphony orchestra performing a symphony or its part of a concerto, but it isn&apos;t useful to do so; it&apos;s better to create an single instance of the symphony orchestra (an instance of MusicalEnsemble and hence of Performer) performing the work.
 
 This class is also intended to cover instances of singing and other vocaliztion, whistling, clapping, and playing an instrument -- in short, anything that contributes to the sounds in a MusicalWork.</rdfs:comment>
@@ -1568,14 +1748,14 @@ This class is also intended to cover instances of singing and other vocaliztion,
     <!-- http://www.co-ode.org/ontologies/ont.owl#SpeakingVoice -->
 
     <Class rdf:about="&ont;SpeakingVoice">
-        <rdfs:subClassOf rdf:resource="&ont;OtherSoundProductionEvent"/>
+        <rdfs:subClassOf rdf:resource="&ont;OtherScoreComponent"/>
     </Class>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#StringQuartet -->
+    <!-- http://www.co-ode.org/ontologies/ont.owl#StringQuartetEnsemble -->
 
-    <Class rdf:about="&ont;StringQuartet">
+    <Class rdf:about="&ont;StringQuartetEnsemble">
         <rdfs:subClassOf rdf:resource="&ont;ChamberEnsemble"/>
         <rdfs:subClassOf>
             <Restriction>
@@ -1587,6 +1767,15 @@ This class is also intended to cover instances of singing and other vocaliztion,
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#StringQuartetScoreComponent -->
+
+    <Class rdf:about="&ont;StringQuartetScoreComponent">
+        <rdfs:subClassOf rdf:resource="&ont;InstrumentalGroupScoreComponent"/>
+        <rdfs:comment>This refers to to standard string quartet scoring for two violins, viola, and cello.  This will be used as the sole MusicalScoreComponent of a string quartet MusicalWork, but there are other occasional uses for it, too.</rdfs:comment>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#StringQuartetWork -->
 
     <Class rdf:about="&ont;StringQuartetWork">
@@ -1594,7 +1783,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="&ont;workHasPerformer"/>
-                <onClass rdf:resource="&ont;StringQuartet"/>
+                <onClass rdf:resource="&ont;StringQuartetEnsemble"/>
                 <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
             </Restriction>
         </rdfs:subClassOf>
@@ -1702,6 +1891,14 @@ This class is also intended to cover instances of singing and other vocaliztion,
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#VocalGroupScoreComponent -->
+
+    <Class rdf:about="&ont;VocalGroupScoreComponent">
+        <rdfs:subClassOf rdf:resource="&ont;GroupScoreComponent"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#VocalMusicalWork -->
 
     <Class rdf:about="&ont;VocalMusicalWork">
@@ -1710,18 +1907,10 @@ This class is also intended to cover instances of singing and other vocaliztion,
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#VocalSoundProductionEvent -->
-
-    <Class rdf:about="&ont;VocalSoundProductionEvent">
-        <rdfs:subClassOf rdf:resource="&ont;MusicGroupSoundProductionEvent"/>
-    </Class>
-    
-
-
     <!-- http://www.co-ode.org/ontologies/ont.owl#Whistling -->
 
     <Class rdf:about="&ont;Whistling">
-        <rdfs:subClassOf rdf:resource="&ont;OtherSoundProductionEvent"/>
+        <rdfs:subClassOf rdf:resource="&ont;OtherScoreComponent"/>
     </Class>
     
 
@@ -1871,7 +2060,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
     <!-- http://www.co-ode.org/ontologies/ont.owl#EmersonStringQuartet -->
 
     <NamedIndividual rdf:about="&ont;EmersonStringQuartet">
-        <rdf:type rdf:resource="&ont;StringQuartet"/>
+        <rdf:type rdf:resource="&ont;StringQuartetEnsemble"/>
     </NamedIndividual>
     
 
@@ -1957,7 +2146,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
     <!-- http://www.co-ode.org/ontologies/ont.owl#KronosQuartet -->
 
     <NamedIndividual rdf:about="&ont;KronosQuartet">
-        <rdf:type rdf:resource="&ont;StringQuartet"/>
+        <rdf:type rdf:resource="&ont;StringQuartetEnsemble"/>
     </NamedIndividual>
     
 
@@ -1975,7 +2164,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
     <!-- http://www.co-ode.org/ontologies/ont.owl#LondonPhilharmonic_sample_concert_Harmonielehre_Adams -->
 
     <NamedIndividual rdf:about="&ont;LondonPhilharmonic_sample_concert_Harmonielehre_Adams">
-        <rdf:type rdf:resource="&ont;InstrumentalGroupSoundProductionEvent"/>
+        <rdf:type rdf:resource="&ont;SoundProductionEvent"/>
         <ont:partPerformedBy rdf:resource="&ont;LondonPhilharmonic"/>
         <ont:partInPerformance rdf:resource="&ont;sample_concert_perf_of_Harmonielehre_Adams"/>
     </NamedIndividual>
@@ -1985,7 +2174,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
     <!-- http://www.co-ode.org/ontologies/ont.owl#LondonPhilharmonic_sample_concert_SymphonyNo4_Mahler -->
 
     <NamedIndividual rdf:about="&ont;LondonPhilharmonic_sample_concert_SymphonyNo4_Mahler">
-        <rdf:type rdf:resource="&ont;InstrumentalGroupSoundProductionEvent"/>
+        <rdf:type rdf:resource="&ont;SoundProductionEvent"/>
         <ont:partPerformedBy rdf:resource="&ont;LondonPhilharmonic"/>
         <ont:partInPerformance rdf:resource="&ont;sample_concert_perf_of_SymphonyNo4_Mahler"/>
     </NamedIndividual>
@@ -2004,7 +2193,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
     <!-- http://www.co-ode.org/ontologies/ont.owl#LuciaPopp_sample_concert_SymphonyNo4_Mahler -->
 
     <NamedIndividual rdf:about="&ont;LuciaPopp_sample_concert_SymphonyNo4_Mahler">
-        <rdf:type rdf:resource="&ont;SopranoVoice"/>
+        <rdf:type rdf:resource="&ont;SoundProductionEvent"/>
         <ont:partPerformedBy rdf:resource="&ont;LuciaPopp"/>
         <ont:partInPerformance rdf:resource="&ont;sample_concert_perf_of_SymphonyNo4_Mahler"/>
     </NamedIndividual>
@@ -2150,19 +2339,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
         <ont:performanceInEvent rdf:resource="&ont;sample_concert"/>
     </NamedIndividual>
     <rdf:Description>
-        <rdf:type rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>viola</rdfs:label>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&mo;InstrumentalSoundProductionEvent"/>
+        <rdf:type rdf:resource="&mo;InstrumentalScoreComponent"/>
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>cello</rdfs:label>
@@ -2172,6 +2349,18 @@ This class is also intended to cover instances of singing and other vocaliztion,
     </rdf:Description>
     <rdf:Description>
         <rdfs:label>second violin</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>viola</rdfs:label>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&mo;InstrumentalScoreComponent"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&mo;InstrumentalScoreComponent"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&mo;InstrumentalScoreComponent"/>
     </rdf:Description>
     
 
