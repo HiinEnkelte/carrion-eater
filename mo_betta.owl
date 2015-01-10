@@ -33,11 +33,12 @@
         http://musicontology.com/docs/getting-started.html, with addition of
         skos:prefLabel. However, that ontology seems heavily focused on
         recordings, and there appear to have been some bugs in translating from
-        RDF/Turtle. This version is largely TD's as of December 2014, although
+        RDF/Turtle. This version is largely TD&apos;s as of December 2014, although
         it may be desirable to introduce cross-references to existing ontologies.</rdfs:comment>
-        <dc:date rdf:datatype="&xsd;dateTime">2015-01-09T21:23:00</dc:date>
     </Ontology>
     
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -445,12 +446,6 @@
     <Class rdf:about="&mo;Performance">
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;hasPerformedPart"/>
-                <someValuesFrom rdf:resource="&ont;SoundProductionEvent"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
                 <onProperty rdf:resource="&ont;performanceOf"/>
                 <onClass rdf:resource="&mo;MusicalWork"/>
                 <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
@@ -460,6 +455,12 @@
             <Restriction>
                 <onProperty rdf:resource="&ont;performedBy"/>
                 <someValuesFrom rdf:resource="&ont;Performer"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;hasPerformedPart"/>
+                <someValuesFrom rdf:resource="&ont;SoundProductionEvent"/>
             </Restriction>
         </rdfs:subClassOf>
         <disjointWith rdf:resource="&ont;Agent"/>
@@ -474,279 +475,11 @@
     </Class>
     
 
-    <Class rdf:about="&ont;KeyboardInstrument">
-        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
-    </Class>
-    
 
-
-    <Class rdf:about="&ont;BflatClarinet">
-        <rdfs:subClassOf rdf:resource="&ont;Clarinet"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Cornet">
-        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Saxophone">
-        <rdfs:subClassOf rdf:resource="&ont;SingleReedInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Viola">
-        <rdfs:subClassOf rdf:resource="&ont;BowedStringInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Mandolin">
-        <rdfs:subClassOf rdf:resource="&ont;PluckedStringInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Harp">
-        <rdfs:subClassOf rdf:resource="&ont;PluckedStringInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;SingleReedInstrument">
-        <rdfs:subClassOf rdf:resource="&ont;ReedInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;BrassInstrument">
-        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;AerophoneWoodwindInstrument">
-        <rdfs:subClassOf rdf:resource="&ont;WoodwindInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;DoubleBass">
-        <rdfs:subClassOf rdf:resource="&ont;BowedStringInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Guitar">
-        <rdfs:subClassOf rdf:resource="&ont;PluckedStringInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Piccolo">
-        <rdfs:subClassOf rdf:resource="&ont;TransverseAerophoneWoodwindInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;ReedInstrument">
-        <rdfs:subClassOf rdf:resource="&ont;WoodwindInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;StringInstrument">
-        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Flute">
-        <rdfs:subClassOf rdf:resource="&ont;TransverseAerophoneWoodwindInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Sackbut">
-        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;PluckedStringInstrument">
-        <rdfs:subClassOf rdf:resource="&ont;StringInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Recorder">
-        <rdfs:subClassOf rdf:resource="&ont;AerophoneWoodwindInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;CorAnglais">
-        <rdfs:subClassOf rdf:resource="&ont;DoubleReedInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;WagnerTuba">
-        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Harpsichord">
-        <rdfs:subClassOf rdf:resource="&ont;KeyboardInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Clarinet">
-        <rdfs:subClassOf rdf:resource="&ont;SingleReedInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Contrabassoon">
-        <rdfs:subClassOf rdf:resource="&ont;DoubleReedInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Trumpet">
-        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;ViolaDaGamba">
-        <rdfs:subClassOf rdf:resource="&ont;BowedStringInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;AltoFlute">
-        <rdfs:subClassOf rdf:resource="&ont;TransverseAerophoneWoodwindInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;FrenchHorn">
-        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Bassoon">
-        <rdfs:subClassOf rdf:resource="&ont;DoubleReedInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;BowedStringInstrument">
-        <rdfs:subClassOf rdf:resource="&ont;StringInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Trombone">
-        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Oboe">
-        <rdfs:subClassOf rdf:resource="&ont;DoubleReedInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;EflatClarinet">
-        <rdfs:subClassOf rdf:resource="&ont;Clarinet"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Xylophone">
-        <rdfs:subClassOf rdf:resource="&ont;Idiophone"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;ElectronicInstrument">
-        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
-        <rdfs:comment>This class is meant to include all musical sound production via an electronic instrument, broadly defined, such as a synthesizer or an electric guitar.</rdfs:comment>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Organ">
-        <rdfs:subClassOf rdf:resource="&ont;KeyboardInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;PercussionInstrument">
-        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Lute">
-        <rdfs:subClassOf rdf:resource="&ont;PluckedStringInstrument"/>
-    </Class>
-    
-
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Accordion -->
 
     <Class rdf:about="&ont;Accordion">
         <rdfs:subClassOf rdf:resource="&ont;KeyboardInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;BassClarinet">
-        <rdfs:subClassOf rdf:resource="&ont;Clarinet"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;WoodwindInstrument">
-        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Violin">
-        <rdfs:subClassOf rdf:resource="&ont;BowedStringInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;TransverseAerophoneWoodwindInstrument">
-        <rdfs:subClassOf rdf:resource="&ont;AerophoneWoodwindInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Tuba">
-        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;Cello">
-        <rdfs:subClassOf rdf:resource="&ont;BowedStringInstrument"/>
-    </Class>
-    
-
-
-    <Class rdf:about="&ont;DoubleReedInstrument">
-        <rdfs:subClassOf rdf:resource="&ont;ReedInstrument"/>
     </Class>
     
 
@@ -755,6 +488,14 @@
 
     <Class rdf:about="&ont;AcousticGuitar">
         <rdfs:subClassOf rdf:resource="&ont;Guitar"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AerophoneWoodwindInstrument -->
+
+    <Class rdf:about="&ont;AerophoneWoodwindInstrument">
+        <rdfs:subClassOf rdf:resource="&ont;WoodwindInstrument"/>
     </Class>
     
 
@@ -770,6 +511,14 @@
         <disjointWith rdf:resource="&ont;ScoringOfMusicalWork"/>
         <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
         <rdfs:comment>A class subsuming humans and organizations, here in the context of the creation and performance of MusicalWorks.  This class is mostly a handy grouping that enables us to make a few useful statements (e.g., Agents are disjiont from MusicalWorks and Perfomances).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#AltoFlute -->
+
+    <Class rdf:about="&ont;AltoFlute">
+        <rdfs:subClassOf rdf:resource="&ont;TransverseAerophoneWoodwindInstrument"/>
     </Class>
     
 
@@ -814,6 +563,14 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BassClarinet -->
+
+    <Class rdf:about="&ont;BassClarinet">
+        <rdfs:subClassOf rdf:resource="&ont;Clarinet"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#BassDrum -->
 
     <Class rdf:about="&ont;BassDrum">
@@ -830,6 +587,14 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Bassoon -->
+
+    <Class rdf:about="&ont;Bassoon">
+        <rdfs:subClassOf rdf:resource="&ont;DoubleReedInstrument"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#Bell -->
 
     <Class rdf:about="&ont;Bell">
@@ -838,11 +603,43 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BflatClarinet -->
+
+    <Class rdf:about="&ont;BflatClarinet">
+        <rdfs:subClassOf rdf:resource="&ont;Clarinet"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BowedStringInstrument -->
+
+    <Class rdf:about="&ont;BowedStringInstrument">
+        <rdfs:subClassOf rdf:resource="&ont;StringInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BrassInstrument -->
+
+    <Class rdf:about="&ont;BrassInstrument">
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#Celesta -->
 
     <Class rdf:about="&ont;Celesta">
-        <rdfs:subClassOf rdf:resource="&ont;KeyboardInstrument"/>
         <rdfs:subClassOf rdf:resource="&ont;Idiophone"/>
+        <rdfs:subClassOf rdf:resource="&ont;KeyboardInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Cello -->
+
+    <Class rdf:about="&ont;Cello">
+        <rdfs:subClassOf rdf:resource="&ont;BowedStringInstrument"/>
     </Class>
     
 
@@ -873,12 +670,6 @@
                 <someValuesFrom rdf:resource="&ont;ChoralWork"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="&ont;performanceOfPart"/>
-                <someValuesFrom rdf:resource="&ont;VocalGroupScoreComponent"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -903,6 +694,14 @@
 
     <Class rdf:about="&ont;Clapping">
         <rdfs:subClassOf rdf:resource="&ont;OtherScoreComponent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Clarinet -->
+
+    <Class rdf:about="&ont;Clarinet">
+        <rdfs:subClassOf rdf:resource="&ont;SingleReedInstrument"/>
     </Class>
     
 
@@ -939,10 +738,34 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Contrabassoon -->
+
+    <Class rdf:about="&ont;Contrabassoon">
+        <rdfs:subClassOf rdf:resource="&ont;DoubleReedInstrument"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#ContraltoVoice -->
 
     <Class rdf:about="&ont;ContraltoVoice">
         <rdfs:subClassOf rdf:resource="&ont;FemaleVoice"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CorAnglais -->
+
+    <Class rdf:about="&ont;CorAnglais">
+        <rdfs:subClassOf rdf:resource="&ont;DoubleReedInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Cornet -->
+
+    <Class rdf:about="&ont;Cornet">
+        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
     </Class>
     
 
@@ -979,10 +802,34 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DoubleBass -->
+
+    <Class rdf:about="&ont;DoubleBass">
+        <rdfs:subClassOf rdf:resource="&ont;BowedStringInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DoubleReedInstrument -->
+
+    <Class rdf:about="&ont;DoubleReedInstrument">
+        <rdfs:subClassOf rdf:resource="&ont;ReedInstrument"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#Drum -->
 
     <Class rdf:about="&ont;Drum">
         <rdfs:subClassOf rdf:resource="&ont;PercussionInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#EflatClarinet -->
+
+    <Class rdf:about="&ont;EflatClarinet">
+        <rdfs:subClassOf rdf:resource="&ont;Clarinet"/>
     </Class>
     
 
@@ -998,8 +845,8 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#ElectricGuitar -->
 
     <Class rdf:about="&ont;ElectricGuitar">
-        <rdfs:subClassOf rdf:resource="&ont;Guitar"/>
         <rdfs:subClassOf rdf:resource="&ont;ElectricStringInstrument"/>
+        <rdfs:subClassOf rdf:resource="&ont;Guitar"/>
     </Class>
     
 
@@ -1007,8 +854,8 @@
     <!-- http://www.co-ode.org/ontologies/ont.owl#ElectricStringInstrument -->
 
     <Class rdf:about="&ont;ElectricStringInstrument">
-        <rdfs:subClassOf rdf:resource="&ont;StringInstrument"/>
         <rdfs:subClassOf rdf:resource="&ont;ElectronicInstrument"/>
+        <rdfs:subClassOf rdf:resource="&ont;StringInstrument"/>
     </Class>
     
 
@@ -1029,10 +876,35 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ElectronicInstrument -->
+
+    <Class rdf:about="&ont;ElectronicInstrument">
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
+        <rdfs:comment>This class is meant to include all musical sound production via an electronic instrument, broadly defined, such as a synthesizer or an electric guitar.</rdfs:comment>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#FemaleVoice -->
 
     <Class rdf:about="&ont;FemaleVoice">
         <rdfs:subClassOf rdf:resource="&ont;SingingVoice"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Flute -->
+
+    <Class rdf:about="&ont;Flute">
+        <rdfs:subClassOf rdf:resource="&ont;TransverseAerophoneWoodwindInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#FrenchHorn -->
+
+    <Class rdf:about="&ont;FrenchHorn">
+        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
     </Class>
     
 
@@ -1086,6 +958,30 @@ It might be possible to use this class to represent groups of events like concer
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Guitar -->
+
+    <Class rdf:about="&ont;Guitar">
+        <rdfs:subClassOf rdf:resource="&ont;PluckedStringInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Harp -->
+
+    <Class rdf:about="&ont;Harp">
+        <rdfs:subClassOf rdf:resource="&ont;PluckedStringInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Harpsichord -->
+
+    <Class rdf:about="&ont;Harpsichord">
+        <rdfs:subClassOf rdf:resource="&ont;KeyboardInstrument"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#Idiophone -->
 
     <Class rdf:about="&ont;Idiophone">
@@ -1133,6 +1029,14 @@ It might be possible to use this class to represent groups of events like concer
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#KeyboardInstrument -->
+
+    <Class rdf:about="&ont;KeyboardInstrument">
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#LateRomanticGenre -->
 
     <Class rdf:about="&ont;LateRomanticGenre">
@@ -1153,10 +1057,26 @@ It might be possible to use this class to represent groups of events like concer
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Lute -->
+
+    <Class rdf:about="&ont;Lute">
+        <rdfs:subClassOf rdf:resource="&ont;PluckedStringInstrument"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#MaleVoice -->
 
     <Class rdf:about="&ont;MaleVoice">
         <rdfs:subClassOf rdf:resource="&ont;SingingVoice"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Mandolin -->
+
+    <Class rdf:about="&ont;Mandolin">
+        <rdfs:subClassOf rdf:resource="&ont;PluckedStringInstrument"/>
     </Class>
     
 
@@ -1283,6 +1203,14 @@ There are subclasses of this class that serve as useful shorthand, so as not to 
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Oboe -->
+
+    <Class rdf:about="&ont;Oboe">
+        <rdfs:subClassOf rdf:resource="&ont;DoubleReedInstrument"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#Opera -->
 
     <Class rdf:about="&ont;Opera">
@@ -1313,11 +1241,27 @@ There are subclasses of this class that serve as useful shorthand, so as not to 
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Organ -->
+
+    <Class rdf:about="&ont;Organ">
+        <rdfs:subClassOf rdf:resource="&ont;KeyboardInstrument"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#OtherScoreComponent -->
 
     <Class rdf:about="&ont;OtherScoreComponent">
         <rdfs:subClassOf rdf:resource="&ont;MusicalScoreComponent"/>
         <rdfs:comment>This is a catch-all class for types of sound production that occasionally appear in MusicalWorks, such as Whistling, Clapping, or other things that don&apos;t fit under playing an instrument (InstrumentalSoundProductionEvent) or singing (SingingVoice).</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PercussionInstrument -->
+
+    <Class rdf:about="&ont;PercussionInstrument">
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
     </Class>
     
 
@@ -1364,10 +1308,58 @@ There are subclasses of this class that serve as useful shorthand, so as not to 
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Piccolo -->
+
+    <Class rdf:about="&ont;Piccolo">
+        <rdfs:subClassOf rdf:resource="&ont;TransverseAerophoneWoodwindInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PluckedStringInstrument -->
+
+    <Class rdf:about="&ont;PluckedStringInstrument">
+        <rdfs:subClassOf rdf:resource="&ont;StringInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Recorder -->
+
+    <Class rdf:about="&ont;Recorder">
+        <rdfs:subClassOf rdf:resource="&ont;AerophoneWoodwindInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ReedInstrument -->
+
+    <Class rdf:about="&ont;ReedInstrument">
+        <rdfs:subClassOf rdf:resource="&ont;WoodwindInstrument"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#RoamnticGenre -->
 
     <Class rdf:about="&ont;RoamnticGenre">
         <rdfs:subClassOf rdf:resource="&ont;MusicalGenre"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Sackbut -->
+
+    <Class rdf:about="&ont;Sackbut">
+        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Saxophone -->
+
+    <Class rdf:about="&ont;Saxophone">
+        <rdfs:subClassOf rdf:resource="&ont;SingleReedInstrument"/>
     </Class>
     
 
@@ -1423,6 +1415,14 @@ As with any attempt to distinguish the case of two versions of the same work fro
 
     <Class rdf:about="&ont;SingingVoice">
         <rdfs:subClassOf rdf:resource="&ont;MusicalScoreComponent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SingleReedInstrument -->
+
+    <Class rdf:about="&ont;SingleReedInstrument">
+        <rdfs:subClassOf rdf:resource="&ont;ReedInstrument"/>
     </Class>
     
 
@@ -1487,14 +1487,14 @@ As with any attempt to distinguish the case of two versions of the same work fro
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;partPerformedBy"/>
-                <someValuesFrom rdf:resource="&ont;Performer"/>
+                <onProperty rdf:resource="&ont;scoreComponentProduced"/>
+                <someValuesFrom rdf:resource="&ont;MusicalScoreComponent"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;scoreComponentProduced"/>
-                <someValuesFrom rdf:resource="&ont;MusicalScoreComponent"/>
+                <onProperty rdf:resource="&ont;partPerformedBy"/>
+                <someValuesFrom rdf:resource="&ont;Performer"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Instances of this class and its subclasses are intended to represent the production of musical sound by a Performer performing a MusicalWork.  For example, a cellist performing as a soloist in a performance of a cello concerto would be an instance of this class.  We do not need to be unnecessarily fine-grained in the instances created in this class.  For iexample, we could create an instance for each of the violinists in a symphony orchestra performing a symphony or its part of a concerto, but it isn&apos;t useful to do so; it&apos;s better to create an single instance of the symphony orchestra (an instance of MusicalEnsemble and hence of Performer) performing the work.
@@ -1516,6 +1516,14 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <Class rdf:about="&ont;SpeakingVoice">
         <rdfs:subClassOf rdf:resource="&ont;OtherScoreComponent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#StringInstrument -->
+
+    <Class rdf:about="&ont;StringInstrument">
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
     </Class>
     
 
@@ -1612,6 +1620,38 @@ This class is also intended to cover instances of singing and other vocaliztion,
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#TransverseAerophoneWoodwindInstrument -->
+
+    <Class rdf:about="&ont;TransverseAerophoneWoodwindInstrument">
+        <rdfs:subClassOf rdf:resource="&ont;AerophoneWoodwindInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Trombone -->
+
+    <Class rdf:about="&ont;Trombone">
+        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Trumpet -->
+
+    <Class rdf:about="&ont;Trumpet">
+        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Tuba -->
+
+    <Class rdf:about="&ont;Tuba">
+        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#TwelveToneGenre -->
 
     <Class rdf:about="&ont;TwelveToneGenre">
@@ -1640,6 +1680,30 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <Class rdf:about="&ont;Vibraphone">
         <rdfs:subClassOf rdf:resource="&ont;Idiophone"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Viola -->
+
+    <Class rdf:about="&ont;Viola">
+        <rdfs:subClassOf rdf:resource="&ont;BowedStringInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ViolaDaGamba -->
+
+    <Class rdf:about="&ont;ViolaDaGamba">
+        <rdfs:subClassOf rdf:resource="&ont;BowedStringInstrument"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Violin -->
+
+    <Class rdf:about="&ont;Violin">
+        <rdfs:subClassOf rdf:resource="&ont;BowedStringInstrument"/>
     </Class>
     
 
@@ -1674,10 +1738,34 @@ This class is also intended to cover instances of singing and other vocaliztion,
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#WagnerTuba -->
+
+    <Class rdf:about="&ont;WagnerTuba">
+        <rdfs:subClassOf rdf:resource="&ont;BrassInstrument"/>
+    </Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#Whistling -->
 
     <Class rdf:about="&ont;Whistling">
         <rdfs:subClassOf rdf:resource="&ont;OtherScoreComponent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#WoodwindInstrument -->
+
+    <Class rdf:about="&ont;WoodwindInstrument">
+        <rdfs:subClassOf rdf:resource="&mo;InstrumentalScoreComponent"/>
+    </Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Xylophone -->
+
+    <Class rdf:about="&ont;Xylophone">
+        <rdfs:subClassOf rdf:resource="&ont;Idiophone"/>
     </Class>
     
 
@@ -1689,6 +1777,9 @@ This class is also intended to cover instances of singing and other vocaliztion,
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+
+    
+
 
     <!-- http://www.co-ode.org/ontologies/ont.owl#BethesdaMD -->
 
@@ -1998,8 +2089,8 @@ This class is also intended to cover instances of singing and other vocaliztion,
         <ont:performanceOf rdf:resource="&ont;SymphonyNo4_Mahler"/>
         <ont:performanceInEvent rdf:resource="&ont;sample_concert"/>
     </NamedIndividual>
-
 </rdf:RDF>
+
 
 
 <!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
