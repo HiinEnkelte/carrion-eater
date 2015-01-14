@@ -17,17 +17,18 @@
 
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:mo="http://purl.org/ontology/mo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:event="http://purl.org/NET/c4dm/event.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:event="http://purl.org/NET/c4dm/event.owl#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <Ontology>
+        <rdfs:comment rdf:datatype="&xsd;string">Added some links to geonames,org, using isDefinedBy for locations already in GeoNames and seeAlso for locations not yet defined there. Just a placeholder, -kk 1/12/2015</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">This ontology began from the
         Music Ontology example from
         http://musicontology.com/docs/getting-started.html, with addition of
@@ -404,6 +405,7 @@
 
     <Class rdf:about="&mo;InstrumentalScoreComponent">
         <rdfs:subClassOf rdf:resource="&ont;MusicalScoreComponent"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://musicontology.com</rdfs:isDefinedBy>
         <rdfs:comment>As a subclass of SoundProductionEvent, this class has instances intended to represent the production of musical sound by a Performer performing a MusicalWork.  To avoid clumsy names, the subclasses are named by instruments and families of instruments, but keep in mind that, e.g., the subclass Flute actually denotes the flutist&apos;s production of sound in a Performance of a MusicalWork.</rdfs:comment>
     </Class>
     
@@ -413,6 +415,7 @@
 
     <Class rdf:about="&mo;MusicArtist">
         <rdfs:subClassOf rdf:resource="&ont;IndividualPerformer"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://musicontology.com/specification/</rdfs:isDefinedBy>
     </Class>
     
 
@@ -421,6 +424,7 @@
 
     <Class rdf:about="&mo;MusicGroup">
         <rdfs:subClassOf rdf:resource="&ont;GroupPerformer"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://musicontology.com/specification/</rdfs:isDefinedBy>
     </Class>
     
 
@@ -437,6 +441,7 @@
         <disjointWith rdf:resource="&ont;MusicalScoreComponent"/>
         <disjointWith rdf:resource="&ont;ScoringOfMusicalWork"/>
         <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://musicontology.com/specification/</rdfs:isDefinedBy>
         <rdfs:comment>The class of musical compositions, in the abstract, not as manifested in individual Performances.  There are some borderline cases of what constitutes a distinct MusicalWork: ranging from slight differences in performance (transposition, playing a harpsichord piece on a modern piano), to substantially different arrangements (orchestrating a piano piece for full orchestra), to loose adaptations (one composer&apos;s variations on another&apos;s theme).  We will probably just try to be practical rather than punctilious regarding these cases.</rdfs:comment>
     </Class>
     
@@ -453,15 +458,15 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;performanceOf"/>
-                <onClass rdf:resource="&mo;MusicalWork"/>
-                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                <onProperty rdf:resource="&ont;hasPerformedPart"/>
+                <someValuesFrom rdf:resource="&ont;SoundProductionEvent"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;hasPerformedPart"/>
-                <someValuesFrom rdf:resource="&ont;SoundProductionEvent"/>
+                <onProperty rdf:resource="&ont;performanceOf"/>
+                <onClass rdf:resource="&mo;MusicalWork"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
             </Restriction>
         </rdfs:subClassOf>
         <disjointWith rdf:resource="&ont;Agent"/>
@@ -472,6 +477,7 @@
         <disjointWith rdf:resource="&ont;MusicalScoreComponent"/>
         <disjointWith rdf:resource="&ont;ScoringOfMusicalWork"/>
         <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://musicontology.com/specification/</rdfs:isDefinedBy>
         <rdfs:comment>Each instance of Performance is an individual performance of a single MusicalWork, by a set of one or more Performers.  If a concert is repeated, then there&apos;s a separate instance of Performance for each time the MusicalWork is played.</rdfs:comment>
     </Class>
     
@@ -1481,12 +1487,6 @@ As with any attempt to distinguish the case of two versions of the same work fro
     <Class rdf:about="&ont;SoundProductionEvent">
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;scoreComponentProduced"/>
-                <someValuesFrom rdf:resource="&ont;MusicalScoreComponent"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
                 <onProperty rdf:resource="&ont;partPerformedBy"/>
                 <someValuesFrom rdf:resource="&ont;Performer"/>
             </Restriction>
@@ -1496,6 +1496,12 @@ As with any attempt to distinguish the case of two versions of the same work fro
                 <onProperty rdf:resource="&ont;partInPerformance"/>
                 <onClass rdf:resource="&mo;Performance"/>
                 <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="&ont;scoreComponentProduced"/>
+                <someValuesFrom rdf:resource="&ont;MusicalScoreComponent"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Instances of this class and its subclasses are intended to represent the production of musical sound by a Performer performing a MusicalWork.  For example, a cellist performing as a soloist in a performance of a cello concerto would be an instance of this class.  We do not need to be unnecessarily fine-grained in the instances created in this class.  For iexample, we could create an instance for each of the violinists in a symphony orchestra performing a symphony or its part of a concerto, but it isn&apos;t useful to do so; it&apos;s better to create an single instance of the symphony orchestra (an instance of MusicalEnsemble and hence of Performer) performing the work.
@@ -1786,6 +1792,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;BethesdaMD">
         <rdf:type rdf:resource="&ont;GeographicalLocation"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/4348599/bethesda.html</rdfs:isDefinedBy>
         <ont:locatedIn rdf:resource="&ont;MontgomeryCountyMD"/>
     </NamedIndividual>
     
@@ -1795,6 +1802,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;ClariceSmithCenter">
         <rdf:type rdf:resource="&ont;VenueForPerformance"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/6340085/clarice-smith-performing-arts-center.html</rdfs:isDefinedBy>
         <ont:locatedIn rdf:resource="&ont;CollegeParkMD"/>
     </NamedIndividual>
     
@@ -1804,6 +1812,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;CollegeParkMD">
         <rdf:type rdf:resource="&ont;GeographicalLocation"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/4351977/college-park.html</rdfs:isDefinedBy>
         <ont:locatedIn rdf:resource="&ont;PrinceGeorgesCountyMD"/>
     </NamedIndividual>
     
@@ -1821,16 +1830,18 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;FairfaxCityVA">
         <rdf:type rdf:resource="&ont;GeographicalLocation"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/4758023/fairfax.html</rdfs:isDefinedBy>
         <ont:locatedIn rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
         <ont:locatedIn rdf:resource="&ont;Virginia"/>
     </NamedIndividual>
     
 
 
-    <!-- http://www.co-ode.org/ontologies/ont.owl#FiarfaxCountyVA -->
+    <!-- http://www.co-ode.org/ontologies/ont.owl#FairfaxCountyVA -->
 
-    <NamedIndividual rdf:about="&ont;FiarfaxCountyVA">
+    <NamedIndividual rdf:about="&ont;FairfaxCountyVA">
         <rdf:type rdf:resource="&ont;GeographicalLocation"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/4758041/fairfax-county.html</rdfs:isDefinedBy>
         <ont:locatedIn rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
         <ont:locatedIn rdf:resource="&ont;Virginia"/>
     </NamedIndividual>
@@ -1841,6 +1852,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;GMUCenter">
         <rdf:type rdf:resource="&ont;VenueForPerformance"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.geonames.org/4760678/george-mason-university-fairfax-campus.html</rdfs:seeAlso>
         <ont:locatedIn rdf:resource="&ont;FairfaxCityVA"/>
     </NamedIndividual>
     
@@ -1880,6 +1892,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;KennedyCenter">
         <rdf:type rdf:resource="&ont;VenueForPerformance"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/4139237/john-f-kennedy-center-for-the-performing-arts.html</rdfs:isDefinedBy>
         <ont:locatedIn rdf:resource="&ont;WashingtonDC"/>
     </NamedIndividual>
     
@@ -1956,6 +1969,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;Maryland">
         <rdf:type rdf:resource="&ont;GeographicalLocation"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/4361885/maryland.html</rdfs:isDefinedBy>
         <ont:locationsOverlap rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
     </NamedIndividual>
     
@@ -1973,6 +1987,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;MontgomeryCountyMD">
         <rdf:type rdf:resource="&ont;GeographicalLocation"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/4362716/montgomery-county.html</rdfs:isDefinedBy>
         <rdfs:comment>Known for Strathmore, a lack of comprehensive universities, and crazy liquor laws.</rdfs:comment>
         <ont:locatedIn rdf:resource="&ont;Maryland"/>
         <ont:locatedIn rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
@@ -1992,6 +2007,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;NorthBethesdaMD">
         <rdf:type rdf:resource="&ont;GeographicalLocation"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/4363843/north-bethesda.html</rdfs:isDefinedBy>
         <rdfs:comment>A geographical expression motivated primarily by wishful thinking</rdfs:comment>
         <ont:locatedIn rdf:resource="&ont;BethesdaMD"/>
     </NamedIndividual>
@@ -2002,6 +2018,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;PrinceGeorgesCountyMD">
         <rdf:type rdf:resource="&ont;GeographicalLocation"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/4366164/prince-george-s-county.html</rdfs:isDefinedBy>
         <ont:locatedIn rdf:resource="&ont;Maryland"/>
         <ont:locatedIn rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
     </NamedIndividual>
@@ -2012,6 +2029,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;Strathmore">
         <rdf:type rdf:resource="&ont;VenueForPerformance"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.geonames.org/4357010/grosvenor-strathmore-metro-station.html</rdfs:seeAlso>
         <ont:locatedIn rdf:resource="&ont;NorthBethesdaMD"/>
     </NamedIndividual>
     
@@ -2033,6 +2051,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;Virginia">
         <rdf:type rdf:resource="&ont;GeographicalLocation"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/6254928/virginia.html</rdfs:isDefinedBy>
         <ont:locationsOverlap rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
     </NamedIndividual>
     
@@ -2042,6 +2061,7 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;WashingtonDC">
         <rdf:type rdf:resource="&ont;GeographicalLocation"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/4138106/district-of-columbia.html</rdfs:isDefinedBy>
         <ont:locatedIn rdf:resource="&ont;MetroAreaOfWashingtonDC"/>
     </NamedIndividual>
     
