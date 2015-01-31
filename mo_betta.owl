@@ -1376,14 +1376,14 @@ There are subclasses of this class that serve as useful shorthand, so as not to 
     <Class rdf:about="&ont;ScoringOfMusicalWork">
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;hasScoreComponent"/>
-                <someValuesFrom rdf:resource="&ont;MusicalScoreComponent"/>
+                <onProperty rdf:resource="&ont;musicalScoringOf"/>
+                <someValuesFrom rdf:resource="&mo;MusicalWork"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;musicalScoringOf"/>
-                <someValuesFrom rdf:resource="&mo;MusicalWork"/>
+                <onProperty rdf:resource="&ont;hasScoreComponent"/>
+                <someValuesFrom rdf:resource="&ont;MusicalScoreComponent"/>
             </Restriction>
         </rdfs:subClassOf>
         <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
@@ -1493,15 +1493,15 @@ As with any attempt to distinguish the case of two versions of the same work fro
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;partPerformedBy"/>
-                <someValuesFrom rdf:resource="&ont;Performer"/>
+                <onProperty rdf:resource="&ont;partInPerformance"/>
+                <onClass rdf:resource="&mo;Performance"/>
+                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;partInPerformance"/>
-                <onClass rdf:resource="&mo;Performance"/>
-                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                <onProperty rdf:resource="&ont;partPerformedBy"/>
+                <someValuesFrom rdf:resource="&ont;Performer"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Instances of this class and its subclasses are intended to represent the production of musical sound by a Performer performing a MusicalWork.  For example, a cellist performing as a soloist in a performance of a cello concerto would be an instance of this class.  We do not need to be unnecessarily fine-grained in the instances created in this class.  For iexample, we could create an instance for each of the violinists in a symphony orchestra performing a symphony or its part of a concerto, but it isn&apos;t useful to do so; it&apos;s better to create an single instance of the symphony orchestra (an instance of MusicalEnsemble and hence of Performer) performing the work.
@@ -1814,6 +1814,16 @@ This class is also intended to cover instances of singing and other vocaliztion,
         <rdf:type rdf:resource="&ont;GeographicalLocation"/>
         <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/4351977/college-park.html</rdfs:isDefinedBy>
         <ont:locatedIn rdf:resource="&ont;PrinceGeorgesCountyMD"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DavisPerformingArtsCenter -->
+
+    <NamedIndividual rdf:about="&ont;DavisPerformingArtsCenter">
+        <rdf:type rdf:resource="&ont;VenueForPerformance"/>
+        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/6343084/davis-performing-arts-center.html</rdfs:isDefinedBy>
+        <ont:locatedIn rdf:resource="&ont;WashingtonDC"/>
     </NamedIndividual>
     
 
