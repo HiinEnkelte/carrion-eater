@@ -17,16 +17,16 @@
 
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:mo="http://purl.org/ontology/mo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:event="http://purl.org/NET/c4dm/event.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:event="http://purl.org/NET/c4dm/event.owl#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <Ontology>
         <rdfs:comment rdf:datatype="&xsd;string">Added some links to geonames,org, using isDefinedBy for locations already in GeoNames and seeAlso for locations not yet defined there. Just a placeholder, -kk 1/12/2015</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">This ontology began from the
@@ -38,6 +38,36 @@
         it may be desirable to introduce cross-references to existing ontologies.</rdfs:comment>
         <imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
     </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#geonamesURL -->
+
+    <AnnotationProperty rdf:about="&ont;geonamesURL">
+        <rdfs:comment>This is the geonames url for the gps/map location</rdfs:comment>
+        <rdfs:domain rdf:resource="&ont;Location"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#venueURL -->
+
+    <AnnotationProperty rdf:about="&ont;venueURL">
+        <rdfs:domain rdf:resource="&ont;VenueForPerformance"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </AnnotationProperty>
     
 
 
@@ -1289,14 +1319,14 @@ The class Performer is slightly &quot;overloaded&quot;, in that it is also inten
     <Class rdf:about="&ont;ScoringOfMusicalWork">
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;hasScoreComponent"/>
-                <someValuesFrom rdf:resource="&ont;Performer"/>
+                <onProperty rdf:resource="&ont;musicalScoringOf"/>
+                <someValuesFrom rdf:resource="&mo;MusicalWork"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="&ont;musicalScoringOf"/>
-                <someValuesFrom rdf:resource="&mo;MusicalWork"/>
+                <onProperty rdf:resource="&ont;hasScoreComponent"/>
+                <someValuesFrom rdf:resource="&ont;Performer"/>
             </Restriction>
         </rdfs:subClassOf>
         <disjointWith rdf:resource="&ont;SoundProductionEvent"/>
@@ -1649,6 +1679,16 @@ This class is also intended to cover instances of singing and other vocaliztion,
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#BairdAuditoriumNtlMuseumOfNaturalHistory -->
+
+    <NamedIndividual rdf:about="&ont;BairdAuditoriumNtlMuseumOfNaturalHistory">
+        <rdf:type rdf:resource="&ont;VenueForPerformance"/>
+        <ont:geonamesURL rdf:datatype="&xsd;anyURI">http://www.geonames.org/4139757/national-museum-of-natural-history.html</ont:geonamesURL>
+        <ont:venueURL rdf:datatype="&xsd;anyURI">http://www.mnh.si.edu/specialevents/baird.html</ont:venueURL>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#BethesdaMD -->
 
     <NamedIndividual rdf:about="&ont;BethesdaMD">
@@ -1663,7 +1703,8 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;ClariceSmithCenter">
         <rdf:type rdf:resource="&ont;VenueForPerformance"/>
-        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/6340085/clarice-smith-performing-arts-center.html</rdfs:isDefinedBy>
+        <ont:geonamesURL rdf:datatype="&xsd;anyURI">http://www.geonames.org/6340085/clarice-smith-performing-arts-center.html</ont:geonamesURL>
+        <ont:venueURL rdf:datatype="&xsd;anyURI">https://theclarice.umd.edu</ont:venueURL>
         <ont:locatedIn rdf:resource="&ont;CollegeParkMD"/>
     </NamedIndividual>
     
@@ -1679,11 +1720,22 @@ This class is also intended to cover instances of singing and other vocaliztion,
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CoolidgeAuditoriumAtTheLibraryOfCongress -->
+
+    <NamedIndividual rdf:about="&ont;CoolidgeAuditoriumAtTheLibraryOfCongress">
+        <rdf:type rdf:resource="&ont;VenueForPerformance"/>
+        <ont:geonamesURL rdf:datatype="&xsd;anyURI">http://www.geonames.org/4139387/library-of-congress.html</ont:geonamesURL>
+        <ont:venueURL rdf:datatype="&xsd;anyURI">http://www.loc.gov/concerts/</ont:venueURL>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#DavisPerformingArtsCenter -->
 
     <NamedIndividual rdf:about="&ont;DavisPerformingArtsCenter">
         <rdf:type rdf:resource="&ont;VenueForPerformance"/>
-        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/6343084/davis-performing-arts-center.html</rdfs:isDefinedBy>
+        <ont:geonamesURL rdf:datatype="&xsd;anyURI">http://www.geonames.org/6343084/davis-performing-arts-center.html</ont:geonamesURL>
+        <ont:venueURL rdf:datatype="&xsd;anyURI">https://performingarts.georgetown.edu/academics/tpst/davis-performing-arts-center</ont:venueURL>
         <ont:locatedIn rdf:resource="&ont;WashingtonDC"/>
     </NamedIndividual>
     
@@ -1719,11 +1771,22 @@ This class is also intended to cover instances of singing and other vocaliztion,
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#FileneCenterAtWolfTrap -->
+
+    <NamedIndividual rdf:about="&ont;FileneCenterAtWolfTrap">
+        <rdf:type rdf:resource="&ont;VenueForPerformance"/>
+        <ont:geonamesURL rdf:datatype="&xsd;anyURI">http://www.geonames.org/4758747/filene-center.html</ont:geonamesURL>
+        <ont:venueURL rdf:datatype="&xsd;anyURI">http://www.wolftrap.org/Filene_Center.aspx</ont:venueURL>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#GMUCenter -->
 
     <NamedIndividual rdf:about="&ont;GMUCenter">
         <rdf:type rdf:resource="&ont;VenueForPerformance"/>
-        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.geonames.org/4760678/george-mason-university-fairfax-campus.html</rdfs:seeAlso>
+        <ont:venueURL rdf:datatype="&xsd;anyURI">http://cfa.gmu.edu</ont:venueURL>
+        <ont:geonamesURL rdf:datatype="&xsd;anyURI">http://www.geonames.org/6343192/center-for-the-arts-concert-hall.html</ont:geonamesURL>
         <ont:locatedIn rdf:resource="&ont;FairfaxCityVA"/>
     </NamedIndividual>
     
@@ -1763,7 +1826,8 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;KennedyCenter">
         <rdf:type rdf:resource="&ont;VenueForPerformance"/>
-        <rdfs:isDefinedBy rdf:datatype="&xsd;anyURI">http://www.geonames.org/4139237/john-f-kennedy-center-for-the-performing-arts.html</rdfs:isDefinedBy>
+        <ont:geonamesURL rdf:datatype="&xsd;anyURI">http://www.geonames.org/4139237/john-f-kennedy-center-for-the-performing-arts.html</ont:geonamesURL>
+        <ont:venueURL rdf:datatype="&xsd;anyURI">http://www.kennedy-center.org/index.cfm</ont:venueURL>
         <ont:locatedIn rdf:resource="&ont;WashingtonDC"/>
     </NamedIndividual>
     
@@ -1900,7 +1964,8 @@ This class is also intended to cover instances of singing and other vocaliztion,
 
     <NamedIndividual rdf:about="&ont;Strathmore">
         <rdf:type rdf:resource="&ont;VenueForPerformance"/>
-        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.geonames.org/4357010/grosvenor-strathmore-metro-station.html</rdfs:seeAlso>
+        <ont:geonamesURL rdf:datatype="&xsd;anyURI">http://www.geonames.org/4357010/grosvenor-strathmore-metro-station.html</ont:geonamesURL>
+        <ont:venueURL rdf:datatype="&xsd;anyURI">http://www.strathmore.org</ont:venueURL>
         <ont:locatedIn rdf:resource="&ont;NorthBethesdaMD"/>
     </NamedIndividual>
     
